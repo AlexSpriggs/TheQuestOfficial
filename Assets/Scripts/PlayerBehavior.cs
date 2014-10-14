@@ -17,11 +17,12 @@ public class PlayerBehavior : MonoBehaviour {
 	void OnTriggerStay2D(Collider2D col)
 	{
 		if (col.gameObject.tag == "CompTrig" && Input.GetKey(KeyCode.E) && onComp == false) {
-			this.GetComponent<Movement>().speed = new Vector2(0,0);	
+			this.GetComponent<Movement>().speed = 0;	
 			onComp = true;
 		}
 		if (col.gameObject.tag == "CompTrig" && Input.GetKey(KeyCode.Escape) && onComp == true) {
-			this.GetComponent<Movement>().speed = new Vector2(2,2);		
+			this.GetComponent<Movement>().speed = 1;
+			onComp = false;
 		}
 	}
 
