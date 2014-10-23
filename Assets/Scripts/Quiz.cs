@@ -23,7 +23,6 @@ public class Quiz : MonoBehaviour
 		{
 				myStates = ComputerStates.Happy;
 		}
-
 		void OnGUI ()
 		{
 				GUI.skin = compSkin;
@@ -38,33 +37,29 @@ public class Quiz : MonoBehaviour
 	
 		private void menuFunc (int id)
 		{
-				//buttons 
-			GUILayout.Label (curQuestions [id].question);
-			for (int ii = 0; ii < curQuestions[id].answers.Count; ii++) 
-			{
-				if (GUILayout.Button (ii + 1 + " " + curQuestions [id].answers [ii])) 
-				{
-					switch (myStates) 
-					{
+	/*			//buttons 
+				GUILayout.Label (curQuestions [id].question);
+				for (int ii = 0; ii < curQuestions[id].answers.Count; ii++) {
+						if (GUILayout.Button (ii + 1 + " " + curQuestions [id].answers [ii])) {
+								switch (myStates) {
 
-					case ComputerStates.Happy:
-						GUILayout.Label (curQuestions [id].happyResponses [ii]);
-						break;
-					case ComputerStates.Mad:
-						GUILayout.Label (curQuestions [id].madResponses [ii]);
-						break;
-					}
-							//Stress level needs to be recorded*
-					if(GUILayout.Button("Continue!"))
-				  		{
-							enabled = false;
-							menuFunc(id++);
+								case ComputerStates.Happy:
+										GUILayout.Label (curQuestions [id].happyResponses [ii]);
+										break;
+								case ComputerStates.Mad:
+										GUILayout.Label (curQuestions [id].madResponses [ii]);
+										break;
+								}
+								//Stress level needs to be recorded*
+								if (GUILayout.Button ("Continue!")) {
+										enabled = false;
+										menuFunc (id++);
+								}
+
 						}
-
 				}
-			}
+				*/
 		}
-
 
 
 
