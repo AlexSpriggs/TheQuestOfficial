@@ -5,10 +5,6 @@ using System.Collections.Generic;
 public class Quiz : MonoBehaviour
 {
 
-	public CorrectAnswer correctAnswer;
-	public IncorrectAnswer incorrectAnswer;
-	public StressAnswer stressAnswer;
-
 	public List<Question> curQuestions;
 	public int stressLevel;
 	public int currentQuestion;
@@ -17,12 +13,18 @@ public class Quiz : MonoBehaviour
 	private Rect WindowRect = new Rect (0, 0, Screen.width, Screen.height);
 	public GameObject player;
 	public UILabel compLabel;
-	public UIButton firstAns;
+	public GameObject firstAns;
 		public UILabel firstButAns;
-	public UIButton secondAns;
+	public GameObject secondAns;
 		public UILabel secondButAns;
-	public UIButton thirdAns;
+	public GameObject thirdAns;
 		public UILabel thirdButAns;
+
+	public AnswerOneHandler ansOneHandle;
+	public AnswerTwoHandler ansTwoHandle;
+	public AnswerThreeHandler ansThreeHandle;
+
+	public GameObject continueButton;
 
 
 	public enum ComputerStates
@@ -34,27 +36,28 @@ public class Quiz : MonoBehaviour
 
 	void Start ()
 	{
-
 		myStates = ComputerStates.Happy;
+		GoToNextQuestion(0);
 	}
 	public void AfterAnswer(string response)
 	{
 		compLabel.text = response;
-		secondAns.enabled = false;
-		thirdAns.enabled = false;
-
-		firstAns.onClick.Clear ();
-		firstAns.onClick.Add (ContinueToQuestion ());
+		firstAns.SetActive(false);
+		secondAns.SetActive(false);
+		thirdAns.SetActive(false);
+		continueButton.SetActive(true);
 	}
-	public EventDelegate ContinueToQuestion()
+	public void ContinueToQuestion()
 	{
-		GoToNextQuestion (currentQuestion);
-
-		return new EventDelegate();
+		firstAns.SetActive(true);
+		secondAns.SetActive(true);
+		thirdAns.SetActive(true);
+		continueButton.SetActive(false);
+		GoToNextQuestion (currentQuestion + 1);
 	}
 	public void GoToNextQuestion(int curQuestion)
 	{
-		int nextQuestion = curQuestion++;
+		int nextQuestion = curQuestion;
 		currentQuestion = nextQuestion;
 		compLabel.text = curQuestions[nextQuestion].question;
 		for(int i=0; i < curQuestions[nextQuestion].answers.Count; i++)
@@ -63,36 +66,33 @@ public class Quiz : MonoBehaviour
 			{
 				firstButAns.text = curQuestions[nextQuestion].answers[i];
 
-				firstAns.onClick.Clear();
-				switch(curQuestions[nextQuestion].myType)
+				switch(curQuestions[nextQuestion].AnswerOneType)
 				{
 				case Question.answerType.correct:
-					firstAns.onClick.Add(correctAnswer.nextQuestion(i));
+					ansOneHandle.myType = AnswerOneHandler.answerType.correct;
 					break;
 				case Question.answerType.incorrect:
-					firstAns.onClick.Add(incorrectAnswer.nextQuestion(i));
+					ansOneHandle.myType = AnswerOneHandler.answerType.incorrect;
 					break;
 				case Question.answerType.stress:
-					firstAns.onClick.Add(stressAnswer.nextQuestion(i));
+					ansOneHandle.myType = AnswerOneHandler.answerType.stress;
 					break;
 				}
 			}
 			if(i == 1)
 			{
 				secondButAns.text = curQuestions[nextQuestion].answers[i];
-				
-				secondAns.onClick.Clear();
-				switch(curQuestions[nextQuestion].myType)
+
+				switch(curQuestions[nextQuestion].AnswerTwoType)
 				{
 				case Question.answerType.correct:
-					secondAns.onClick.Add(correctAnswer.nextQuestion(i));
-					
+					ansTwoHandle.myType = AnswerTwoHandler.answerType.correct;
 					break;
 				case Question.answerType.incorrect:
-					secondAns.onClick.Add(incorrectAnswer.nextQuestion(i));
+					ansTwoHandle.myType = AnswerTwoHandler.answerType.incorrect;
 					break;
 				case Question.answerType.stress:
-					secondAns.onClick.Add(stressAnswer.nextQuestion(i));
+					ansTwoHandle.myType = AnswerTwoHandler.answerType.stress;
 					break;
 				}
 			}
@@ -100,18 +100,16 @@ public class Quiz : MonoBehaviour
 			{
 				thirdButAns.text = curQuestions[nextQuestion].answers[i];
 
-				thirdAns.onClick.Clear();
-				switch(curQuestions[nextQuestion].myType)
+				switch(curQuestions[nextQuestion].AnswerThreeType)
 				{
 				case Question.answerType.correct:
-					thirdAns.onClick.Add(correctAnswer.nextQuestion(i));
-					
+					ansThreeHandle.myType = AnswerThreeHandler.answerType.correct;
 					break;
 				case Question.answerType.incorrect:
-					thirdAns.onClick.Add(incorrectAnswer.nextQuestion(i));
+					ansThreeHandle.myType = AnswerThreeHandler.answerType.incorrect;
 					break;
 				case Question.answerType.stress:
-					thirdAns.onClick.Add(stressAnswer.nextQuestion(i));
+					ansThreeHandle.myType = AnswerThreeHandler.answerType.stress;
 					break;
 				}
 			}

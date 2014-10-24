@@ -18,7 +18,9 @@ public class Question : MonoBehaviour  {
 		stress
 
 	};
-	public answerType myType;
+	public answerType AnswerOneType;
+	public answerType AnswerTwoType;
+	public answerType AnswerThreeType;
 
 
 
