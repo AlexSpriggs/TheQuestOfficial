@@ -10,8 +10,15 @@ public class Question : MonoBehaviour  {
 	public List<string> madResponses;
 
 	public string question;
-	public int stressAnswer;
+	public enum answerType
+	{
 
+		correct,
+		incorrect,
+		stress
+
+	};
+	public answerType myType;
 
 
 
