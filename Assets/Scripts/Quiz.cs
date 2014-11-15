@@ -11,12 +11,14 @@ public class Quiz : MonoBehaviour
 	public int currentQuestion;
 	public int curCorrect;
 	public GameObject player;
+	public bool QuizComplete;
 	[Header("GUI")]
 	public GUISkin compSkin;
 	public GameObject uiRoot;
-	private Rect WindowRect = new Rect (0, 0, Screen.width, Screen.height);
+	//private Rect WindowRect = new Rect (0, 0, Screen.width, Screen.height);
 	[Header("Answers")]
 	public UILabel compLabel;
+	public GameObject compLabelObject;
 	public GameObject firstAns;
 		public UILabel firstButAns;
 	public GameObject secondAns;
@@ -34,7 +36,9 @@ public class Quiz : MonoBehaviour
 
 	void Start ()
 	{
+		myManager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
 		GoToNextQuestion(0);
+		QuizComplete = false;
 	}
 	public void AfterAnswer(string response)
 	{
@@ -62,6 +66,7 @@ public class Quiz : MonoBehaviour
 		quitButton.SetActive(true);
 		compLabel.text = finalScreenText;
 
+		QuizComplete = true;
 
 	}
 	public void CloseScreen()
@@ -77,6 +82,7 @@ public class Quiz : MonoBehaviour
 		try
 		{
 			compLabel.text = curQuestions[nextQuestion].question;
+
 			for(int i=0; i < curQuestions[nextQuestion].answers.Count; i++)
 			{
 				if(i == 0)

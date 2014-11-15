@@ -16,8 +16,8 @@ public class Movement : MonoBehaviour
 	void Update()
 	{
 		// 3 - Retrieve axis information
-		float inputX = Input.GetAxis("Horizontal");
-		float inputY = Input.GetAxis("Vertical");
+		//float inputX = Input.GetAxis("Horizontal");
+		//float inputY = Input.GetAxis("Vertical");
 		
 		// 4 - Movement per direction
 		//movement = new Vector2(

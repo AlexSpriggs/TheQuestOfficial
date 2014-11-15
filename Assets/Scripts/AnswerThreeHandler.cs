@@ -16,7 +16,10 @@ public class AnswerThreeHandler : MonoBehaviour {
 	};
 	
 	public answerType myType;
-
+	void Start()
+	{
+		myManager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
+	}
 	public void OnClick()
 	{
 		switch(myType)
