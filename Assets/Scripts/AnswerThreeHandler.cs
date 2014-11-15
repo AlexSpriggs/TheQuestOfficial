@@ -4,6 +4,7 @@ using System.Collections;
 public class AnswerThreeHandler : MonoBehaviour {
 
 	public Quiz curQuiz;
+	public GameManager myManager;
 	
 	public enum answerType
 	{
@@ -22,14 +23,24 @@ public class AnswerThreeHandler : MonoBehaviour {
 		{
 		case answerType.correct:
 			curQuiz.curCorrect++;
-			curQuiz.AfterAnswer (curQuiz.curQuestions[curQuiz.currentQuestion].happyResponses[2]);
+			myManager.StressLevel--;
+			if(myManager.myState == GameManager.ComputerStates.Happy)
+				curQuiz.AfterAnswer(curQuiz.curQuestions[curQuiz.currentQuestion].happyResponses[2]);
+			else
+				curQuiz.AfterAnswer(curQuiz.curQuestions[curQuiz.currentQuestion].madResponses[2]);
 			break;
 		case answerType.incorrect:
-			curQuiz.AfterAnswer (curQuiz.curQuestions[curQuiz.currentQuestion].happyResponses[2]);
+			if(myManager.myState == GameManager.ComputerStates.Happy)
+				curQuiz.AfterAnswer(curQuiz.curQuestions[curQuiz.currentQuestion].happyResponses[2]);
+			else
+				curQuiz.AfterAnswer(curQuiz.curQuestions[curQuiz.currentQuestion].madResponses[2]);
 			break;
 		case answerType.stress:
-			curQuiz.stressLevel++;
-			curQuiz.AfterAnswer(curQuiz.curQuestions[curQuiz.currentQuestion].happyResponses[2]);
+			myManager.StressLevel++;
+			if(myManager.myState == GameManager.ComputerStates.Happy)
+				curQuiz.AfterAnswer(curQuiz.curQuestions[curQuiz.currentQuestion].happyResponses[2]);
+			else
+				curQuiz.AfterAnswer(curQuiz.curQuestions[curQuiz.currentQuestion].madResponses[2]);
 			break;
 		}
 	}
