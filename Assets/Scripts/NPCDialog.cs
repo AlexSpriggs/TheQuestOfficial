@@ -7,8 +7,10 @@ public class NPCDialog : MonoBehaviour {
 	private int index = 0;
 
 	// Displays the next string of dialog and return true. If there aren't any new lines of dialog, set index to 0 and return false
-	public bool TriggerDialog(GameObject dialogBox, UILabel dialogUILabel) {
-		if (index >= dialog.Count) {
+	public bool TriggerDialog(GameObject dialogBox, UILabel dialogUILabel) 
+	{
+		if (index >= dialog.Count) 
+		{
 			index = 0;
 			dialogUILabel.text = "";
 			dialogBox.SetActive(false);

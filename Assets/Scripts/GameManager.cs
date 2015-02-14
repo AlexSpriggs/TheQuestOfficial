@@ -6,6 +6,7 @@ public class GameManager : MonoBehaviour {
 	public int StressLevel;
 	public int MadResponseSwitch;
 	public int HappyResponseSwitch;
+	private bool isFirstPlaythrough = true;
 
 	public enum ComputerStates
 	{
@@ -37,4 +38,7 @@ public class GameManager : MonoBehaviour {
 			myState = ComputerStates.Happy;
 	
 	}
+
+	public bool checkIsFirstPlaythrough()	{ return isFirstPlaythrough; }
+	public void firstPlaythroughDone()		{ isFirstPlaythrough = false; }
 }

@@ -8,12 +8,17 @@ public class PlayerBehavior : MonoBehaviour {
 	public GameObject uiRoot;
 	public float fadeSpeed = 1.5f;          // Speed that the screen fades to and from black.
 	public GameObject fader;
+	public string outsideSceneName = "Outside";
 	
 	private bool sceneStarting = false;      // Whether or not the scene is still fading in.
+	private int nextSceneNumber;
+	private const int outsideSceneNumber = -1;
+	private GameManager _GameManager;
 
 	void Start()
 	{
 		fader=GameObject.FindGameObjectWithTag("Fader");
+		_GameManager=GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
 	}
 	void Awake ()
 	{
@@ -30,19 +35,29 @@ public class PlayerBehavior : MonoBehaviour {
 	}
 	void OnTriggerStay2D(Collider2D col)
 	{
-		if (col.gameObject.tag == "CompTrig" && Input.GetKey(KeyCode.E) && onComp == false) {
+		if (col.gameObject.tag == "CompTrig" && Input.GetKey(KeyCode.E) && onComp == false) 
+		{
 			this.GetComponent<Movement>().speed = 0;	
 			onComp = true;
 			uiRoot.SetActive(true);
 			//mainCam.GetComponent<Quiz>().GoToNextQuestion(0);
 			//set NGUI renderer on
 		}
-		if (col.gameObject.tag == "BedTrig" && Input.GetKey(KeyCode.E)) {	
+		if (col.gameObject.tag == "BedTrig" && Input.GetKey(KeyCode.E)) 
+		{	
 			if(mainCam.GetComponent<Quiz>().QuizComplete)
+			{
+				nextSceneNumber = Application.loadedLevel + 1;
 				sceneStarting = true;
-		
+			}
 		}
-		//if (col.gameObject.tag == "CompTrig" && Input.GetKey(KeyCode.Escape) && onComp == true) {
+		if (col.gameObject.tag == "DoorTrig" && Input.GetKey(KeyCode.E) && !_GameManager.checkIsFirstPlaythrough()) 
+		{	
+			nextSceneNumber = outsideSceneNumber;
+			sceneStarting = true;
+		}
+		//if (col.gameObject.tag == "CompTrig" && Input.GetKey(KeyCode.Escape) && onComp == true) 
+		//{
 			//this.GetComponent<Movement>().speed = 1;
 			//onComp = false;
 			//set NGUI renderer off
@@ -79,7 +94,6 @@ public class PlayerBehavior : MonoBehaviour {
 	
 	public void EndScene ()
 	{
-		int i = Application.loadedLevel;
 		// Make sure the texture is enabled.
 		fader.guiTexture.enabled = true;
 		
@@ -88,8 +102,17 @@ public class PlayerBehavior : MonoBehaviour {
 		
 		// If the screen is almost black...
 		if(fader.guiTexture.color.a >= .80f)
-			// ... reload the level.
-			Application.LoadLevel(i + 1);
+		{
+			if (nextSceneNumber == outsideSceneNumber)
+			{
+				Application.LoadLevel(outsideSceneName);
+			}
+			else
+			{
+				// ... reload the level.
+				Application.LoadLevel(nextSceneNumber);
+			}
+		}
 	}
 	
 }

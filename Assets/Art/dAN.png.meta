@@ -3,6 +3,7 @@ guid: 1b22c716e53d4cd42ad1d1c90db7a585
 TextureImporter:
   fileIDToRecycleName:
     21300000: dAN
+    21300002: MR DAN
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -26,9 +27,9 @@ TextureImporter:
   maxTextureSize: 1024
   textureSettings:
     filterMode: -1
-    aniso: -1
+    aniso: 1
     mipBias: -1
-    wrapMode: -1
+    wrapMode: 1
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50

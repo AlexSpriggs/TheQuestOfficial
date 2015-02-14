@@ -39,8 +39,9 @@ public class Quiz : MonoBehaviour
 	{
 		myManager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
 		currentQuestion = -1;
-		BeforeQuizStarts();
 		QuizComplete = false;
+		BeforeQuizStarts();
+
 	}
 	public void BeforeQuizStarts()
 	{
@@ -70,13 +71,14 @@ public class Quiz : MonoBehaviour
 	{
 		//Jack how do?
 		//uiRoot.SetActive(false);
+		QuizComplete = true;
 		firstAns.SetActive(false);
 		secondAns.SetActive(false);
 		thirdAns.SetActive(false);
 		quitButton.SetActive(true);
 		compLabel.text = finalScreenText;
 
-		QuizComplete = true;
+
 
 	}
 	public void CloseScreen()
