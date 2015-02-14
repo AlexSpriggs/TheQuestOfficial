@@ -6,6 +6,8 @@ public class PlayerBehavior : MonoBehaviour {
 	public bool onComp = false;
 	public GameObject mainCam;
 	public GameObject uiRoot;
+	public GameObject questUIFirstHalf;
+	public GameObject questUISecondHalf;
 	public float fadeSpeed = 1.5f;          // Speed that the screen fades to and from black.
 	public GameObject fader;
 	public string outsideSceneName = "Outside";
@@ -39,6 +41,7 @@ public class PlayerBehavior : MonoBehaviour {
 		{
 			this.GetComponent<Movement>().speed = 0;	
 			onComp = true;
+			questUIFirstHalf.SetActive(false);
 			uiRoot.SetActive(true);
 			//mainCam.GetComponent<Quiz>().GoToNextQuestion(0);
 			//set NGUI renderer on

@@ -16,6 +16,8 @@ public class Quiz : MonoBehaviour
 	[Header("GUI")]
 	public GUISkin compSkin;
 	public GameObject uiRoot;
+	public GameObject questUIFirstHalf;
+	public GameObject questUISecondHalf;
 	//private Rect WindowRect = new Rect (0, 0, Screen.width, Screen.height);
 	[Header("Answers")]
 	public UILabel compLabel;
@@ -39,9 +41,8 @@ public class Quiz : MonoBehaviour
 	{
 		myManager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
 		currentQuestion = -1;
-		QuizComplete = false;
 		BeforeQuizStarts();
-
+		QuizComplete = false;
 	}
 	public void BeforeQuizStarts()
 	{
@@ -71,19 +72,19 @@ public class Quiz : MonoBehaviour
 	{
 		//Jack how do?
 		//uiRoot.SetActive(false);
-		QuizComplete = true;
 		firstAns.SetActive(false);
 		secondAns.SetActive(false);
 		thirdAns.SetActive(false);
 		quitButton.SetActive(true);
 		compLabel.text = finalScreenText;
 
-
+		QuizComplete = true;
 
 	}
 	public void CloseScreen()
 	{
 		uiRoot.SetActive(false);
+		questUISecondHalf.SetActive(true);
 		player.GetComponent<Movement>().speed = 1;	
 		
 	}
