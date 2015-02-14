@@ -187,9 +187,12 @@
      <Compile Include="Assets\Scripts\CompBehavior.cs" />
      <Compile Include="Assets\Scripts\GameManager.cs" />
      <Compile Include="Assets\Scripts\Movement.cs" />
+     <Compile Include="Assets\Scripts\NPCDialog.cs" />
      <Compile Include="Assets\Scripts\PlayerBehavior.cs" />
+     <Compile Include="Assets\Scripts\PlayerDialog.cs" />
      <Compile Include="Assets\Scripts\Question.cs" />
      <Compile Include="Assets\Scripts\Quiz.cs" />
+     <Compile Include="Assets\Scripts\XPTracker.cs" />
      <None Include="Assets\NGUI\Examples\Shaders\Unlit - Depth Cutout.shader" />
      <None Include="Assets\NGUI\ReadMe - 3.7.4.txt" />
      <None Include="Assets\NGUI\Resources\Shaders\Unlit - Text 2.shader" />

@@ -12,6 +12,7 @@ public class Quiz : MonoBehaviour
 	public int curCorrect;
 	public GameObject player;
 	public bool QuizComplete;
+	public string BeforeQuizStartsScript;
 	[Header("GUI")]
 	public GUISkin compSkin;
 	public GameObject uiRoot;
@@ -37,8 +38,17 @@ public class Quiz : MonoBehaviour
 	void Start ()
 	{
 		myManager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
-		GoToNextQuestion(0);
+		currentQuestion = -1;
+		BeforeQuizStarts();
 		QuizComplete = false;
+	}
+	public void BeforeQuizStarts()
+	{
+		compLabel.text = BeforeQuizStartsScript;
+		firstAns.SetActive(false);
+		secondAns.SetActive(false);
+		thirdAns.SetActive(false);
+		continueButton.SetActive(true);
 	}
 	public void AfterAnswer(string response)
 	{
@@ -82,6 +92,7 @@ public class Quiz : MonoBehaviour
 		try
 		{
 			compLabel.text = curQuestions[nextQuestion].question;
+			compLabel.ProcessText();
 
 			for(int i=0; i < curQuestions[nextQuestion].answers.Count; i++)
 			{
@@ -140,7 +151,18 @@ public class Quiz : MonoBehaviour
 		}
 		catch
 		{
-			EndQuiz();
+			if(curCorrect >= 3)
+				EndQuiz();
+			else
+			{
+				compLabel.text = "You have failed. Try again.";
+				currentQuestion = -1;
+				firstAns.SetActive(false);
+				secondAns.SetActive(false);
+				thirdAns.SetActive(false);
+				continueButton.SetActive(true);
+			}
+
 		}
 
 

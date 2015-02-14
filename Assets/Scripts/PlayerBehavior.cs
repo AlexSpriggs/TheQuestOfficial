@@ -34,7 +34,7 @@ public class PlayerBehavior : MonoBehaviour {
 			this.GetComponent<Movement>().speed = 0;	
 			onComp = true;
 			uiRoot.SetActive(true);
-			mainCam.GetComponent<Quiz>().GoToNextQuestion(0);
+			//mainCam.GetComponent<Quiz>().GoToNextQuestion(0);
 			//set NGUI renderer on
 		}
 		if (col.gameObject.tag == "BedTrig" && Input.GetKey(KeyCode.E)) {	
