@@ -37,12 +37,15 @@ public class Quiz : MonoBehaviour
 	public GameObject continueButton;
 	public GameObject quitButton;
 
+	private string questionText;
+
 	void Start ()
 	{
 		myManager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
 		currentQuestion = -1;
 		BeforeQuizStarts();
 		QuizComplete = false;
+		questionText = compLabel.text;
 	}
 	public void BeforeQuizStarts()
 	{
@@ -88,6 +91,7 @@ public class Quiz : MonoBehaviour
 		player.GetComponent<Movement>().speed = 1;	
 		
 	}
+
 	public void GoToNextQuestion(int curQuestion)
 	{
 		int nextQuestion = curQuestion;
@@ -95,7 +99,7 @@ public class Quiz : MonoBehaviour
 		try
 		{
 			compLabel.text = curQuestions[nextQuestion].question;
-			compLabel.ProcessText();
+			//compLabel.ProcessText();
 
 			for(int i=0; i < curQuestions[nextQuestion].answers.Count; i++)
 			{
@@ -151,6 +155,8 @@ public class Quiz : MonoBehaviour
 					}
 				}
 			}
+
+			//compLabelObject.GetComponent<TypewriterEffect>().ResetToBeginning();
 		}
 		catch
 		{

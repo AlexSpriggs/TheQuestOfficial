@@ -12,7 +12,8 @@ public class PlayerBehavior : MonoBehaviour {
 	public GameObject fader;
 	public string outsideSceneName = "Outside";
 	
-	private bool sceneStarting = false;      // Whether or not the scene is still fading in.
+	private bool sceneStarting = true;      // Whether or not the scene is still fading in.
+	private bool sceneEnding = false;
 	private int nextSceneNumber;
 	private const int outsideSceneNumber = -1;
 	private GameManager _GameManager;
@@ -24,14 +25,16 @@ public class PlayerBehavior : MonoBehaviour {
 	}
 	void Awake ()
 	{
-
+		fader.guiTexture.color = Color.black;
 		// Set the texture so that it is the the size of the screen and covers it.
 		fader.guiTexture.pixelInset = new Rect(0f, 0f, Screen.width, Screen.height);
 	}
 	void Update () {
 		// If the scene is starting...
 		if(sceneStarting)
+			StartScene ();
 			// ... call the StartScene function.
+		if(sceneEnding)
 			EndScene();
 		
 	}
@@ -51,13 +54,13 @@ public class PlayerBehavior : MonoBehaviour {
 			if(mainCam.GetComponent<Quiz>().QuizComplete)
 			{
 				nextSceneNumber = Application.loadedLevel + 1;
-				sceneStarting = true;
+				sceneEnding = true;
 			}
 		}
 		if (col.gameObject.tag == "DoorTrig" && Input.GetKey(KeyCode.E) && !_GameManager.checkIsFirstPlaythrough()) 
 		{	
 			nextSceneNumber = outsideSceneNumber;
-			sceneStarting = true;
+			sceneEnding = true;
 		}
 		//if (col.gameObject.tag == "CompTrig" && Input.GetKey(KeyCode.Escape) && onComp == true) 
 		//{

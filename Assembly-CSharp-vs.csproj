@@ -185,6 +185,7 @@
      <Compile Include="Assets\Scripts\AnswerThreeHandler.cs" />
      <Compile Include="Assets\Scripts\AnswerTwoHandler.cs" />
      <Compile Include="Assets\Scripts\CompBehavior.cs" />
+     <Compile Include="Assets\Scripts\Fader.cs" />
      <Compile Include="Assets\Scripts\FirstPlaythroughDone.cs" />
      <Compile Include="Assets\Scripts\GameManager.cs" />
      <Compile Include="Assets\Scripts\Movement.cs" />
