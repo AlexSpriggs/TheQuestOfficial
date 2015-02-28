@@ -6,6 +6,8 @@ using UnityEditor;
 public class Quiz : MonoBehaviour
 {
 
+	private soundManager SM;
+
 	public List<Question> curQuestions;
 	public GameManager myManager;
 	public int currentQuestion;
@@ -46,6 +48,8 @@ public class Quiz : MonoBehaviour
 		BeforeQuizStarts();
 		QuizComplete = false;
 		questionText = compLabel.text;
+
+		SM = GameObject.FindGameObjectWithTag ("SoundManager").GetComponent<soundManager>();
 	}
 	public void BeforeQuizStarts()
 	{
@@ -70,6 +74,11 @@ public class Quiz : MonoBehaviour
 		thirdAns.SetActive(true);
 		continueButton.SetActive(false);
 		GoToNextQuestion (currentQuestion + 1);
+
+		//Referencing AudioScript
+		SM.isClickSound = true;
+		SM.GUISounds ();
+		SM.isClickSound = false;
 	}
 	public void EndQuiz()
 	{
@@ -82,6 +91,11 @@ public class Quiz : MonoBehaviour
 		compLabel.text = finalScreenText;
 
 		QuizComplete = true;
+
+		//Referencing AudioScript
+		SM.isClickSound = true;
+		SM.GUISounds ();
+		SM.isClickSound = false;
 
 	}
 	public void CloseScreen()

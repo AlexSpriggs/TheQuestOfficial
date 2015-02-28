@@ -3,6 +3,8 @@ using System.Collections;
 
 public class AnswerOneHandler : MonoBehaviour {
 
+	private soundManager SM;
+
 	public Quiz curQuiz;
 	public GameManager myManager;
 
@@ -19,9 +21,16 @@ public class AnswerOneHandler : MonoBehaviour {
 	void Start()
 	{
 		myManager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
+
+		SM = GameObject.FindGameObjectWithTag ("SoundManager").GetComponent<soundManager>();
 	}
 	public void OnClick()
 	{
+		//Referencing AudioScript
+		SM.isClickSound = true;
+		SM.GUISounds ();
+		SM.isClickSound = false;
+
 		switch(myType)
 		{
 		case answerType.correct:

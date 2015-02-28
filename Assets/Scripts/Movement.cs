@@ -5,44 +5,29 @@
 /// </summary>
 public class Movement : MonoBehaviour
 {
-	/// <summary>
-	/// 1 - The speed of the ship
-	/// </summary>
-	//public Vector2 speed = new Vector2(50, 50);
-	public float speed = 1;
-	// 2 - Store the movement
-	private Vector2 movement;
-	
-	void Update()
+	public float speed = 3;
+
+	private Vector3 direction;
+	private Vector3 clickPosition;
+	private bool isMoving;
+	private float minDistanceToClick;
+	private string targetColliderTag;
+	private PlayerBehavior _PlayerBehavior;
+
+	void Start() 
 	{
-		// 3 - Retrieve axis information
-		//float inputX = Input.GetAxis("Horizontal");
-		//float inputY = Input.GetAxis("Vertical");
-		
-		// 4 - Movement per direction
-		//movement = new Vector2(
-			//speed.x * inputX,
-			//speed.y * inputY);
-
-
-
-		if (Input.GetKey (KeyCode.A)) {
-
-
-
-				}
-		if (Input.GetKey (KeyCode.D)) {
-			
-
-			
-		}
-		
+		isMoving = false;
+		minDistanceToClick = 0.01f;
+		targetColliderTag = "";
+		_PlayerBehavior = gameObject.GetComponent<PlayerBehavior> ();
 	}
-	
 	void FixedUpdate()
+	{	
+		MouseMovement ();
+	}
+
+	void KeyBoardMovement()
 	{
-		// 5 - Move the game object
-		//rigidbody2D.velocity = movement;
 		if (Input.GetKey(KeyCode.A)) 
 		{
 			transform.Translate(new Vector3(-speed,0,0) * Time.deltaTime);
@@ -63,4 +48,41 @@ public class Movement : MonoBehaviour
 			transform.Translate(new Vector3(0,-speed,0) * Time.deltaTime);
 		}
 	}
+
+	void MouseMovement()
+	{
+		if (isMoving) 
+		{
+			if (ReachedTarget())
+				isMoving = false;
+			transform.Translate (direction * Time.fixedDeltaTime * speed);
+		}
+		if (Input.GetMouseButtonDown(0))
+		{
+			clickPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+			direction = new Vector3(clickPosition.x - transform.position.x, clickPosition.y - transform.position.y, 0);
+			direction.Normalize();
+			isMoving = true;
+		}
+	}
+
+	bool ReachedTarget()
+	{
+		Vector3 distance = new Vector3(clickPosition.x - transform.position.x, clickPosition.y - transform.position.y, 0);
+		if (distance.magnitude < minDistanceToClick)
+			return true;
+		else 
+			return false;
+	}
+	
+	void OnCollisionEnter2D(Collision2D col)
+	{
+		isMoving = false;
+		if (targetColliderTag == col.transform.tag)
+			_PlayerBehavior.Trigger(targetColliderTag);
+		else
+			targetColliderTag = "";
+	}
+
+	public void setTargetColliderTag(string tag) { targetColliderTag = tag; }
 }

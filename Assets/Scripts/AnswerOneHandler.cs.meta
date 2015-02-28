@@ -2,7 +2,10 @@ fileFormatVersion: 2
 guid: 923cb1f61738a154799b4b43d7356f4f
 MonoImporter:
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - clickSound: {fileID: 8300000, guid: a5e7702ebd74642e3a1bb4593e78bc2a, type: 3}
+  - curQuiz: {instanceID: 0}
+  - myManager: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
