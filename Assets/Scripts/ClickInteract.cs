@@ -4,9 +4,11 @@ using System.Collections;
 public class ClickInteract : MonoBehaviour {
 	
 	public GameObject player;
-	
+
 	private Movement _Movement;
+	private PlayerBehavior _PlayerBehavior;
 	private SpriteRenderer spriterenderer;
+	private bool isTouchingPlayer = false;
 	private float highlightSinValue;		// tracks how dark to color the interactable object (by using sine and incrementing till PI)
 	private float highlightFrequency;		// affects how fast interactable objects flash
 	private float colorFlashRange;
@@ -15,6 +17,7 @@ public class ClickInteract : MonoBehaviour {
 	
 	void Start() {
 		_Movement = player.GetComponent<Movement>();
+		_PlayerBehavior = player.GetComponent<PlayerBehavior>();
 		spriterenderer = gameObject.GetComponent<SpriteRenderer>();
 		
 		highlightSinValue = 0.0f;
@@ -32,6 +35,11 @@ public class ClickInteract : MonoBehaviour {
 	
 	void OnMouseDown() {
 		_Movement.setTargetColliderTag (transform.tag);
+		if (isTouchingPlayer)
+		{
+			_Movement.stopMoving();
+			_PlayerBehavior.Trigger(transform.tag, collider2D);
+		}
 	}
 	
 	void OnMouseOver() {
@@ -54,5 +62,20 @@ public class ClickInteract : MonoBehaviour {
 	
 	void resetSpriteColor() {
 		spriterenderer.color = Color.white;
+	}
+
+	void OnCollisionStay2D(Collision2D col)
+	{
+		if (col.gameObject.tag == "Player")
+			isTouchingPlayer = true;
+	}
+
+	void OnCollisionExit2D(Collision2D col)
+	{
+		if (col.gameObject.tag == "Player")
+		{
+			isTouchingPlayer = false;
+			_Movement.setTargetColliderTag ("");
+		}
 	}
 }

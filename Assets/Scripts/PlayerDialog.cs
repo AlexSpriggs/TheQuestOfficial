@@ -21,7 +21,7 @@ public class PlayerDialog : MonoBehaviour {
 		// If player is within range and interacting with a NPC / object that has dialog
 		if (coll.CompareTag("DialogTrig") && Input.GetKeyDown(KeyCode.E)) {
 			if(!isDialogTyping) {				// if a new string of dialog isn't being displayed, check if there's anymore dialog to show
-				if (coll.GetComponent<NPCDialog>().TriggerDialog(dialogBox, dialogUILabel)) {
+				if (coll.GetComponent<NPCDialog>().TriggerDialog(dialogBox, dialogUILabel, _TypewriterEffect)) {
 					_Movement.enabled = false;
 					isDialogTyping = true;
 				}

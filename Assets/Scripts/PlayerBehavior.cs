@@ -4,7 +4,8 @@ using System.Collections;
 public class PlayerBehavior : MonoBehaviour {
 
 	private soundManager SM;
-	
+
+#region IndoorsVariables
 	public bool onComp = false;
 	public GameObject mainCam;
 	public GameObject uiRoot;
@@ -19,40 +20,103 @@ public class PlayerBehavior : MonoBehaviour {
 	private int nextSceneNumber;
 	private const int outsideSceneNumber = 4;
 	private GameManager _GameManager;
-	
+#endregion
+
+#region OutsideVariables
+	public bool isOutside = false;
+    public GameObject dialogBox;
+    private Collider2D npcColl;
+
+    // Script Objects
+    private Movement _Movement;
+    private TypewriterEffect _TypewriterEffect;
+    private UILabel dialogUILabel;
+
+    private bool isTalking = false;
+    private bool isDialogTyping = false;		// is the npc's dialog currently being "typed out" on the screen
+#endregion
+
 	void Start()
 	{
-		fader=GameObject.FindGameObjectWithTag("Fader");
-		_GameManager=GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
+		if (!isOutside)
+		{
+			fader=GameObject.FindGameObjectWithTag("Fader");
+			_GameManager=GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
 
-		SM = GameObject.FindGameObjectWithTag("SoundManager").GetComponent<soundManager>();
+	        SM = GameObject.FindGameObjectWithTag("SoundManager").GetComponent<soundManager>();
+		}
+		else
+		{
+	        _Movement = gameObject.GetComponent<Movement>();
+	        _TypewriterEffect = dialogBox.GetComponent<TypewriterEffect>();
+	        dialogUILabel = dialogBox.GetComponent<UILabel>();
+		}
 	}
 
 	void Awake ()
 	{
-		fader.guiTexture.color = Color.black;
-		// Set the texture so that it is the the size of the screen and covers it.
-		fader.guiTexture.pixelInset = new Rect(0f, 0f, Screen.width, Screen.height);
+		if (!isOutside)
+		{
+			fader.guiTexture.color = Color.black;
+			// Set the texture so that it is the the size of the screen and covers it.
+			fader.guiTexture.pixelInset = new Rect(0f, 0f, Screen.width, Screen.height);
+		}
 	}
 
 	void Update () {
-		// If the scene is starting...
-		if(sceneStarting)
-			StartScene ();
-		// ... call the StartScene function.
-		if(sceneEnding)
-			EndScene();
-		
+		if (!isOutside)
+		{
+			// If the scene is starting...
+			if(sceneStarting)
+				StartScene ();
+			// ... call the StartScene function.
+			if(sceneEnding)
+				EndScene();
+		}
+		else if (isTalking && Input.GetMouseButtonDown(0))
+        {
+			DialogTriggered();
+        }
 	}
 
+	public void Trigger(string tag, Collider2D col) 
+	{
+		switch(tag)
+		{
+		case "CompTrig":
+			if(!onComp) 
+				ComputerTriggered();
+			break;
+		case "BedTrig":
+			if(mainCam.GetComponent<Quiz>().QuizComplete) 
+				BedTriggered();
+			break;
+		case "DoorTrig":
+			if(!_GameManager.checkIsFirstPlaythrough()) 
+				DoorTriggered();
+			break;
+		case "DialogTrig":
+			if (!isTalking)
+			{
+				isTalking = true;
+				npcColl = col;
+				DialogTriggered();
+			}
+			break;
+		}
+	}
+
+/*
 	void OnTriggerStay2D(Collider2D col)
 	{
 		if (Input.GetKey(KeyCode.E)) 
 		{
-			Trigger (col.gameObject.tag);
+			Trigger (col.gameObject.tag, col);
 		}
 	}
+*/
 
+#region IndoorsFunctions
 	void ComputerTriggered() 
 	{
 		SM.isComputerOn = true;
@@ -76,7 +140,7 @@ public class PlayerBehavior : MonoBehaviour {
 		OutsideScene = true;
 		sceneEnding = true;
 	}
-
+		
 	void FadeToClear ()
 	{
 		// Lerp the colour of the texture between itself and transparent.
@@ -128,20 +192,35 @@ public class PlayerBehavior : MonoBehaviour {
 			}
 		}
 	}
-
-	public void Trigger(string tag) 
+#endregion
+	
+#region OutsideFunctions
+	void DialogTriggered()
 	{
-		switch(tag)
-		{
-		case "CompTrig":
-			if(!onComp) ComputerTriggered();
-			break;
-		case "BedTrig":
-			if(mainCam.GetComponent<Quiz>().QuizComplete) BedTriggered();
-			break;
-		case "DoorTrig":
-			if(!_GameManager.checkIsFirstPlaythrough()) DoorTriggered();
-			break;
+		if (!isDialogTyping)        // if a new string of dialog isn't being displayed, check if there's anymore dialog to show
+		{				
+			if (npcColl.GetComponent<NPCDialog>().TriggerDialog(dialogBox, dialogUILabel, _TypewriterEffect))
+			{
+				_Movement.enabled = false;
+				isDialogTyping = true;
+			}
+			else                    // if there isn't, enable player movement
+			{							
+				_Movement.enabled = true;
+				isDialogTyping = false;
+				isTalking = false;
+			}
+			//_TypewriterEffect.ResetToBeginning();
+		}
+		else if (isDialogTyping)    // otherwise, if a new string of dialog is being "typed out", finish the typing effect
+		{			
+			_TypewriterEffect.Finish();
+			isDialogTyping = false;
 		}
 	}
+
+	public void dialogStatusUpdate() {
+		isDialogTyping = false;
+	}
+#endregion
 }

@@ -7,20 +7,19 @@ public class Movement : MonoBehaviour
 {
 	public float speed = 3;
 
+	private Vector2 collPosition;
 	private Vector3 direction;
 	private Vector3 clickPosition;
-	private bool isMoving;
-	private float minDistanceToClick;
-	private string targetColliderTag;
+	private bool isMoving = false;
+	private float minDistanceToClick = 0.01f;
+	private string targetColliderTag = "";
 	private PlayerBehavior _PlayerBehavior;
 
 	void Start() 
 	{
-		isMoving = false;
-		minDistanceToClick = 0.01f;
-		targetColliderTag = "";
 		_PlayerBehavior = gameObject.GetComponent<PlayerBehavior> ();
 	}
+
 	void FixedUpdate()
 	{	
 		MouseMovement ();
@@ -53,8 +52,8 @@ public class Movement : MonoBehaviour
 	{
 		if (isMoving) 
 		{
-			if (ReachedTarget())
-				isMoving = false;
+			if (ReachedTarget()) // if (ReachedTarget() || HitObstacle())
+				stopMoving();
 			transform.Translate (direction * Time.fixedDeltaTime * speed);
 		}
 		if (Input.GetMouseButtonDown(0))
@@ -74,15 +73,29 @@ public class Movement : MonoBehaviour
 		else 
 			return false;
 	}
+
+	bool HitObstacle()
+	{
+		if (collPosition.x == transform.position.x && (direction.x != 0))
+			return true;
+		else if (collPosition.y == transform.position.y && (direction.y != 0))
+			return true;
+		else
+			return false;
+	}
 	
 	void OnCollisionEnter2D(Collision2D col)
 	{
-		isMoving = false;
-		if (targetColliderTag == col.transform.tag)
-			_PlayerBehavior.Trigger(targetColliderTag);
-		else
-			targetColliderTag = "";
+		collPosition = transform.position;
+		stopMoving();
+        if (targetColliderTag == col.transform.tag)
+        {
+            _PlayerBehavior.Trigger(targetColliderTag, col.gameObject.GetComponent<Collider2D>());
+        }
+        else
+            targetColliderTag = "";
 	}
 
 	public void setTargetColliderTag(string tag) { targetColliderTag = tag; }
+	public void stopMoving() { isMoving = false; }
 }
