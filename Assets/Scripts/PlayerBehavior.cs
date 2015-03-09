@@ -5,7 +5,8 @@ public class PlayerBehavior : MonoBehaviour {
 
 	private soundManager SM;
 
-#region IndoorsVariables
+#region IndoorVariables
+	[Header("Indoor Variables")]
 	public bool onComp = false;
 	public GameObject mainCam;
 	public GameObject uiRoot;
@@ -23,6 +24,7 @@ public class PlayerBehavior : MonoBehaviour {
 #endregion
 
 #region OutsideVariables
+	[Header("Outside Variables")]
 	public bool isOutside = false;
     public GameObject dialogBox;
     private Collider2D npcColl;
@@ -68,7 +70,7 @@ public class PlayerBehavior : MonoBehaviour {
 		{
 			// If the scene is starting...
 			if(sceneStarting)
-				StartScene ();
+				StartScene();
 			// ... call the StartScene function.
 			if(sceneEnding)
 				EndScene();
@@ -116,7 +118,7 @@ public class PlayerBehavior : MonoBehaviour {
 	}
 */
 
-#region IndoorsFunctions
+#region IndoorFunctions
 	void ComputerTriggered() 
 	{
 		SM.isComputerOn = true;
@@ -130,7 +132,6 @@ public class PlayerBehavior : MonoBehaviour {
 	
 	void BedTriggered() 
 	{
-		Debug.Log ("Bed Triggered");
 		nextSceneNumber = Application.loadedLevel + 1;
 		sceneEnding = true;
 	}
@@ -164,7 +165,7 @@ public class PlayerBehavior : MonoBehaviour {
 			// ... set the colour to clear and disable the GUITexture.
 			fader.guiTexture.color = Color.clear;
 			fader.guiTexture.enabled = false;
-			
+
 			// The scene is no longer starting.
 			sceneStarting = false;
 		}
@@ -177,9 +178,9 @@ public class PlayerBehavior : MonoBehaviour {
 		
 		// Start fading towards black.
 		FadeToBlack();
-		
+
 		// If the screen is almost black...
-		if(fader.guiTexture.color.a >= .80f)
+		if(fader.guiTexture.color.a >= 0.49f)
 		{
 			if (OutsideScene)
 			{
@@ -187,7 +188,7 @@ public class PlayerBehavior : MonoBehaviour {
 			}
 			else
 			{
-				// ... reload the level.
+				// ... load the level.
 				Application.LoadLevel(nextSceneNumber);
 			}
 		}

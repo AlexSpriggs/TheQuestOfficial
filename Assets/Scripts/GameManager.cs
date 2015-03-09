@@ -6,7 +6,8 @@ public class GameManager : MonoBehaviour {
 	public int StressLevel;
 	public int MadResponseSwitch;
 	public int HappyResponseSwitch;
-	private bool isFirstPlaythrough = true;
+	public GameObject doorTrigger;
+	private bool isFirstPlaythrough = false;
 
 	public enum ComputerStates
 	{
@@ -21,14 +22,11 @@ public class GameManager : MonoBehaviour {
 		DontDestroyOnLoad(transform.gameObject);
 	}
 
-
 	void Start () {
 
 		StressLevel = 0;
 		myState = ComputerStates.Happy;
-
 	}
-	
 
 	void FixedUpdate () {
 
@@ -37,6 +35,16 @@ public class GameManager : MonoBehaviour {
 		if(StressLevel <= HappyResponseSwitch && myState != ComputerStates.Happy)
 			myState = ComputerStates.Happy;
 	
+	}
+
+	void OnLevelWasLoaded(int level) {
+		if (level == 1 || level == 2) {
+			doorTrigger = GameObject.FindGameObjectWithTag("DoorTrig");
+			if (!isFirstPlaythrough && doorTrigger != null)
+				doorTrigger.SetActive(true);
+			else
+				doorTrigger.SetActive(false);
+		}
 	}
 
 	public bool checkIsFirstPlaythrough()	{ return isFirstPlaythrough; }

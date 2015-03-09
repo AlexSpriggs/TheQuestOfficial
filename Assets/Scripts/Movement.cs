@@ -13,11 +13,14 @@ public class Movement : MonoBehaviour
 	private bool isMoving = false;
 	private float minDistanceToClick = 0.01f;
 	private string targetColliderTag = "";
+
 	private PlayerBehavior _PlayerBehavior;
+	private Animator animator;
 
 	void Start() 
 	{
 		_PlayerBehavior = gameObject.GetComponent<PlayerBehavior> ();
+		animator = gameObject.GetComponent<Animator>();
 	}
 
 	void FixedUpdate()
@@ -62,6 +65,8 @@ public class Movement : MonoBehaviour
 			direction = new Vector3(clickPosition.x - transform.position.x, clickPosition.y - transform.position.y, 0);
 			direction.Normalize();
 			isMoving = true;
+			UpdateAnimatorMovementVars();
+			UpdateAnimatorIsMoving();
 		}
 	}
 
@@ -84,6 +89,19 @@ public class Movement : MonoBehaviour
 			return false;
 	}
 	
+	void UpdateAnimatorIsMoving()
+	{
+		animator.SetBool("is_moving", isMoving);
+	}
+
+	void UpdateAnimatorMovementVars()
+	{
+		animator.SetFloat("dir_x", direction.x);
+		animator.SetFloat("dir_y", direction.y);
+		if (Mathf.Abs(direction.y) > Mathf.Abs(direction.x)) animator.SetBool("is_y_greaterthan_x", true);
+		else animator.SetBool("is_y_greaterthan_x", false);
+	}
+
 	void OnCollisionEnter2D(Collision2D col)
 	{
 		collPosition = transform.position;
@@ -97,5 +115,8 @@ public class Movement : MonoBehaviour
 	}
 
 	public void setTargetColliderTag(string tag) { targetColliderTag = tag; }
-	public void stopMoving() { isMoving = false; }
+	public void stopMoving() { 
+		isMoving = false;
+		UpdateAnimatorIsMoving();
+	}
 }

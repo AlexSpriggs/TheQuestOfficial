@@ -25,7 +25,7 @@ TextureImporter:
     21300040: questgirl_idle_19
     21300042: questgirl_idle_20
     21300044: questgirl_idle_21
-    21300046: questgirl_idle_22
+    21300046: questgirl_idle_21
     21300048: questgirl_idle_23
     21300050: questgirl_idle_24
     21300052: questgirl_idle_25
@@ -67,6 +67,7 @@ TextureImporter:
     21300124: questgirl_idle_61
     21300126: questgirl_idle_62
     21300128: questgirl_idle_63
+    21300130: questgirl_idle_22
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -116,7 +117,7 @@ TextureImporter:
         width: 45
         height: 127
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: questgirl_idle_1
       rect:
@@ -126,7 +127,7 @@ TextureImporter:
         width: 45
         height: 127
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: questgirl_idle_2
       rect:
@@ -136,7 +137,7 @@ TextureImporter:
         width: 45
         height: 127
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: questgirl_idle_3
       rect:
@@ -146,7 +147,7 @@ TextureImporter:
         width: 45
         height: 127
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: questgirl_idle_4
       rect:
@@ -156,7 +157,7 @@ TextureImporter:
         width: 45
         height: 127
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: questgirl_idle_5
       rect:
@@ -166,7 +167,7 @@ TextureImporter:
         width: 45
         height: 127
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: questgirl_idle_6
       rect:
@@ -176,7 +177,7 @@ TextureImporter:
         width: 45
         height: 127
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: questgirl_idle_7
       rect:
@@ -186,7 +187,7 @@ TextureImporter:
         width: 45
         height: 127
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: questgirl_idle_8
       rect:
@@ -194,9 +195,9 @@ TextureImporter:
         x: 56
         y: 979
         width: 45
-        height: 125
+        height: 127
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: questgirl_idle_9
       rect:
@@ -204,19 +205,19 @@ TextureImporter:
         x: 216
         y: 979
         width: 45
-        height: 125
+        height: 127
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: questgirl_idle_10
       rect:
         serializedVersion: 2
-        x: 376
+        x: 374
         y: 979
         width: 45
-        height: 125
+        height: 127
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: questgirl_idle_11
       rect:
@@ -224,9 +225,9 @@ TextureImporter:
         x: 536
         y: 979
         width: 45
-        height: 125
+        height: 127
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: questgirl_idle_12
       rect:
@@ -234,9 +235,9 @@ TextureImporter:
         x: 696
         y: 979
         width: 45
-        height: 125
+        height: 127
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: questgirl_idle_13
       rect:
@@ -244,9 +245,9 @@ TextureImporter:
         x: 856
         y: 979
         width: 45
-        height: 125
+        height: 127
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: questgirl_idle_14
       rect:
@@ -254,29 +255,29 @@ TextureImporter:
         x: 1016
         y: 979
         width: 45
-        height: 125
+        height: 127
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: questgirl_idle_15
       rect:
         serializedVersion: 2
-        x: 1176
+        x: 1174
         y: 979
         width: 45
-        height: 125
+        height: 127
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: questgirl_idle_16
       rect:
         serializedVersion: 2
-        x: 51
+        x: 49
         y: 819
         width: 47
-        height: 125
+        height: 127
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: questgirl_idle_17
       rect:
@@ -284,9 +285,9 @@ TextureImporter:
         x: 211
         y: 819
         width: 47
-        height: 125
+        height: 127
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: questgirl_idle_18
       rect:
@@ -294,9 +295,9 @@ TextureImporter:
         x: 371
         y: 819
         width: 47
-        height: 125
+        height: 127
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: questgirl_idle_19
       rect:
@@ -304,9 +305,9 @@ TextureImporter:
         x: 531
         y: 819
         width: 47
-        height: 125
+        height: 127
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: questgirl_idle_20
       rect:
@@ -314,29 +315,29 @@ TextureImporter:
         x: 691
         y: 819
         width: 47
-        height: 125
+        height: 127
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: questgirl_idle_21
       rect:
         serializedVersion: 2
-        x: 851
+        x: 853
         y: 819
         width: 47
-        height: 125
+        height: 127
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: questgirl_idle_22
       rect:
         serializedVersion: 2
-        x: 1011
+        x: 1009
         y: 819
         width: 47
-        height: 125
+        height: 127
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: questgirl_idle_23
       rect:
@@ -344,9 +345,9 @@ TextureImporter:
         x: 1171
         y: 819
         width: 47
-        height: 125
+        height: 127
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: questgirl_idle_24
       rect:
@@ -354,9 +355,9 @@ TextureImporter:
         x: 51
         y: 659
         width: 47
-        height: 124
+        height: 127
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: questgirl_idle_25
       rect:
@@ -364,9 +365,9 @@ TextureImporter:
         x: 211
         y: 659
         width: 47
-        height: 124
+        height: 127
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: questgirl_idle_26
       rect:
@@ -374,9 +375,9 @@ TextureImporter:
         x: 371
         y: 659
         width: 47
-        height: 124
+        height: 127
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: questgirl_idle_27
       rect:
@@ -384,9 +385,9 @@ TextureImporter:
         x: 531
         y: 659
         width: 47
-        height: 124
+        height: 127
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: questgirl_idle_28
       rect:
@@ -394,19 +395,19 @@ TextureImporter:
         x: 691
         y: 659
         width: 47
-        height: 124
+        height: 127
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: questgirl_idle_29
       rect:
         serializedVersion: 2
-        x: 851
-        y: 659
+        x: 853
+        y: 661
         width: 47
-        height: 124
+        height: 127
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: questgirl_idle_30
       rect:
@@ -414,19 +415,19 @@ TextureImporter:
         x: 1011
         y: 659
         width: 47
-        height: 124
+        height: 127
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: questgirl_idle_31
       rect:
         serializedVersion: 2
         x: 1171
-        y: 659
+        y: 661
         width: 47
-        height: 124
+        height: 127
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: questgirl_idle_32
       rect:
@@ -436,7 +437,7 @@ TextureImporter:
         width: 45
         height: 127
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: questgirl_idle_33
       rect:
@@ -446,7 +447,7 @@ TextureImporter:
         width: 45
         height: 127
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: questgirl_idle_34
       rect:
@@ -456,7 +457,7 @@ TextureImporter:
         width: 45
         height: 127
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: questgirl_idle_35
       rect:
@@ -466,7 +467,7 @@ TextureImporter:
         width: 45
         height: 127
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: questgirl_idle_36
       rect:
@@ -476,7 +477,7 @@ TextureImporter:
         width: 45
         height: 127
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: questgirl_idle_37
       rect:
@@ -486,7 +487,7 @@ TextureImporter:
         width: 45
         height: 127
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: questgirl_idle_38
       rect:
@@ -496,7 +497,7 @@ TextureImporter:
         width: 45
         height: 127
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: questgirl_idle_39
       rect:
@@ -506,7 +507,7 @@ TextureImporter:
         width: 45
         height: 127
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: questgirl_idle_40
       rect:
@@ -514,9 +515,9 @@ TextureImporter:
         x: 56
         y: 339
         width: 45
-        height: 125
+        height: 127
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: questgirl_idle_41
       rect:
@@ -524,9 +525,9 @@ TextureImporter:
         x: 216
         y: 339
         width: 45
-        height: 125
+        height: 127
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: questgirl_idle_42
       rect:
@@ -534,9 +535,9 @@ TextureImporter:
         x: 376
         y: 339
         width: 45
-        height: 125
+        height: 127
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: questgirl_idle_43
       rect:
@@ -544,9 +545,9 @@ TextureImporter:
         x: 536
         y: 339
         width: 45
-        height: 125
+        height: 127
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: questgirl_idle_44
       rect:
@@ -554,9 +555,9 @@ TextureImporter:
         x: 696
         y: 339
         width: 45
-        height: 125
+        height: 127
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: questgirl_idle_45
       rect:
@@ -564,9 +565,9 @@ TextureImporter:
         x: 856
         y: 339
         width: 45
-        height: 125
+        height: 127
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: questgirl_idle_46
       rect:
@@ -574,9 +575,9 @@ TextureImporter:
         x: 1016
         y: 339
         width: 45
-        height: 125
+        height: 127
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: questgirl_idle_47
       rect:
@@ -584,19 +585,19 @@ TextureImporter:
         x: 1176
         y: 339
         width: 45
-        height: 125
+        height: 127
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: questgirl_idle_48
       rect:
         serializedVersion: 2
-        x: 62
+        x: 60
         y: 179
         width: 47
-        height: 125
+        height: 127
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: questgirl_idle_49
       rect:
@@ -604,9 +605,9 @@ TextureImporter:
         x: 222
         y: 179
         width: 47
-        height: 125
+        height: 127
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: questgirl_idle_50
       rect:
@@ -614,9 +615,9 @@ TextureImporter:
         x: 382
         y: 179
         width: 47
-        height: 125
+        height: 127
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: questgirl_idle_51
       rect:
@@ -624,9 +625,9 @@ TextureImporter:
         x: 542
         y: 179
         width: 47
-        height: 125
+        height: 127
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: questgirl_idle_52
       rect:
@@ -634,9 +635,9 @@ TextureImporter:
         x: 702
         y: 179
         width: 47
-        height: 125
+        height: 127
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: questgirl_idle_53
       rect:
@@ -644,9 +645,9 @@ TextureImporter:
         x: 862
         y: 179
         width: 47
-        height: 125
+        height: 127
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: questgirl_idle_54
       rect:
@@ -654,9 +655,9 @@ TextureImporter:
         x: 1022
         y: 179
         width: 47
-        height: 125
+        height: 127
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: questgirl_idle_55
       rect:
@@ -664,9 +665,9 @@ TextureImporter:
         x: 1182
         y: 179
         width: 47
-        height: 125
+        height: 127
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: questgirl_idle_56
       rect:
@@ -674,19 +675,19 @@ TextureImporter:
         x: 62
         y: 19
         width: 47
-        height: 124
+        height: 127
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: questgirl_idle_57
       rect:
         serializedVersion: 2
-        x: 222
+        x: 220
         y: 19
         width: 47
-        height: 124
+        height: 127
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: questgirl_idle_58
       rect:
@@ -694,9 +695,9 @@ TextureImporter:
         x: 382
         y: 19
         width: 47
-        height: 124
+        height: 127
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: questgirl_idle_59
       rect:
@@ -704,9 +705,9 @@ TextureImporter:
         x: 542
         y: 19
         width: 47
-        height: 124
+        height: 127
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: questgirl_idle_60
       rect:
@@ -714,9 +715,9 @@ TextureImporter:
         x: 702
         y: 19
         width: 47
-        height: 124
+        height: 127
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: questgirl_idle_61
       rect:
@@ -724,19 +725,19 @@ TextureImporter:
         x: 862
         y: 19
         width: 47
-        height: 124
+        height: 127
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: questgirl_idle_62
       rect:
         serializedVersion: 2
-        x: 1022
+        x: 1020
         y: 19
         width: 47
-        height: 124
+        height: 127
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: questgirl_idle_63
       rect:
@@ -744,9 +745,9 @@ TextureImporter:
         x: 1182
         y: 19
         width: 47
-        height: 124
+        height: 127
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 

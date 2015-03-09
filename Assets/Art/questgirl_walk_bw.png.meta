@@ -1,0 +1,399 @@
+fileFormatVersion: 2
+guid: 6f79eae93f943d842a6250b9924ca287
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: questgirl_walk_bw_0
+    21300002: questgirl_walk_bw_1
+    21300004: questgirl_walk_bw_2
+    21300006: questgirl_walk_bw_3
+    21300008: questgirl_walk_bw_4
+    21300010: questgirl_walk_bw_5
+    21300012: questgirl_walk_bw_6
+    21300014: questgirl_walk_bw_7
+    21300016: questgirl_walk_bw_8
+    21300018: questgirl_walk_bw_9
+    21300020: questgirl_walk_bw_10
+    21300022: questgirl_walk_bw_11
+    21300024: questgirl_walk_bw_12
+    21300026: questgirl_walk_bw_13
+    21300028: questgirl_walk_bw_14
+    21300030: questgirl_walk_bw_15
+    21300032: questgirl_walk_bw_16
+    21300034: questgirl_walk_bw_17
+    21300036: questgirl_walk_bw_18
+    21300038: questgirl_walk_bw_19
+    21300040: questgirl_walk_bw_20
+    21300042: questgirl_walk_bw_21
+    21300044: questgirl_walk_bw_22
+    21300046: questgirl_walk_bw_23
+    21300048: questgirl_walk_bw_24
+    21300050: questgirl_walk_bw_25
+    21300052: questgirl_walk_bw_26
+    21300054: questgirl_walk_bw_27
+    21300056: questgirl_walk_bw_28
+    21300058: questgirl_walk_bw_29
+    21300060: questgirl_walk_bw_30
+    21300062: questgirl_walk_bw_31
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 1024
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 160
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: questgirl_walk_bw_0
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 499
+        width: 45
+        height: 127
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: questgirl_walk_bw_1
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 499
+        width: 45
+        height: 127
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: questgirl_walk_bw_2
+      rect:
+        serializedVersion: 2
+        x: 376
+        y: 499
+        width: 45
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: questgirl_walk_bw_3
+      rect:
+        serializedVersion: 2
+        x: 536
+        y: 499
+        width: 45
+        height: 127
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: questgirl_walk_bw_4
+      rect:
+        serializedVersion: 2
+        x: 696
+        y: 499
+        width: 45
+        height: 127
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: questgirl_walk_bw_5
+      rect:
+        serializedVersion: 2
+        x: 856
+        y: 499
+        width: 45
+        height: 127
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: questgirl_walk_bw_6
+      rect:
+        serializedVersion: 2
+        x: 1016
+        y: 499
+        width: 45
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: questgirl_walk_bw_7
+      rect:
+        serializedVersion: 2
+        x: 1176
+        y: 499
+        width: 45
+        height: 127
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: questgirl_walk_bw_8
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 339
+        width: 49
+        height: 127
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: questgirl_walk_bw_9
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 339
+        width: 48
+        height: 127
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: questgirl_walk_bw_10
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 339
+        width: 47
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: questgirl_walk_bw_11
+      rect:
+        serializedVersion: 2
+        x: 534
+        y: 339
+        width: 47
+        height: 127
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: questgirl_walk_bw_12
+      rect:
+        serializedVersion: 2
+        x: 694
+        y: 339
+        width: 49
+        height: 127
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: questgirl_walk_bw_13
+      rect:
+        serializedVersion: 2
+        x: 854
+        y: 339
+        width: 48
+        height: 127
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: questgirl_walk_bw_14
+      rect:
+        serializedVersion: 2
+        x: 1014
+        y: 339
+        width: 47
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: questgirl_walk_bw_15
+      rect:
+        serializedVersion: 2
+        x: 1174
+        y: 339
+        width: 47
+        height: 127
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: questgirl_walk_bw_16
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 179
+        width: 45
+        height: 127
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: questgirl_walk_bw_17
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 179
+        width: 45
+        height: 127
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: questgirl_walk_bw_18
+      rect:
+        serializedVersion: 2
+        x: 379
+        y: 179
+        width: 45
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: questgirl_walk_bw_19
+      rect:
+        serializedVersion: 2
+        x: 539
+        y: 179
+        width: 45
+        height: 127
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: questgirl_walk_bw_20
+      rect:
+        serializedVersion: 2
+        x: 699
+        y: 179
+        width: 45
+        height: 127
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: questgirl_walk_bw_21
+      rect:
+        serializedVersion: 2
+        x: 859
+        y: 179
+        width: 45
+        height: 127
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: questgirl_walk_bw_22
+      rect:
+        serializedVersion: 2
+        x: 1019
+        y: 179
+        width: 45
+        height: 127
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: questgirl_walk_bw_23
+      rect:
+        serializedVersion: 2
+        x: 1179
+        y: 179
+        width: 45
+        height: 127
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: questgirl_walk_bw_24
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 19
+        width: 49
+        height: 127
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: questgirl_walk_bw_25
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 19
+        width: 48
+        height: 127
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: questgirl_walk_bw_26
+      rect:
+        serializedVersion: 2
+        x: 379
+        y: 19
+        width: 47
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: questgirl_walk_bw_27
+      rect:
+        serializedVersion: 2
+        x: 539
+        y: 19
+        width: 47
+        height: 127
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: questgirl_walk_bw_28
+      rect:
+        serializedVersion: 2
+        x: 697
+        y: 19
+        width: 49
+        height: 127
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: questgirl_walk_bw_29
+      rect:
+        serializedVersion: 2
+        x: 858
+        y: 19
+        width: 48
+        height: 127
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: questgirl_walk_bw_30
+      rect:
+        serializedVersion: 2
+        x: 1019
+        y: 19
+        width: 47
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: questgirl_walk_bw_31
+      rect:
+        serializedVersion: 2
+        x: 1179
+        y: 19
+        width: 47
+        height: 127
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
