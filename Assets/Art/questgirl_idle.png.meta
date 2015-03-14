@@ -272,7 +272,7 @@ TextureImporter:
     - name: questgirl_idle_16
       rect:
         serializedVersion: 2
-        x: 49
+        x: 51
         y: 819
         width: 47
         height: 127
@@ -592,7 +592,7 @@ TextureImporter:
     - name: questgirl_idle_48
       rect:
         serializedVersion: 2
-        x: 60
+        x: 63
         y: 179
         width: 47
         height: 127
@@ -622,7 +622,7 @@ TextureImporter:
     - name: questgirl_idle_51
       rect:
         serializedVersion: 2
-        x: 542
+        x: 543
         y: 179
         width: 47
         height: 127
@@ -662,7 +662,7 @@ TextureImporter:
     - name: questgirl_idle_55
       rect:
         serializedVersion: 2
-        x: 1182
+        x: 1183
         y: 179
         width: 47
         height: 127
@@ -672,7 +672,7 @@ TextureImporter:
     - name: questgirl_idle_56
       rect:
         serializedVersion: 2
-        x: 62
+        x: 63
         y: 19
         width: 47
         height: 127
@@ -742,7 +742,7 @@ TextureImporter:
     - name: questgirl_idle_63
       rect:
         serializedVersion: 2
-        x: 1182
+        x: 1183
         y: 19
         width: 47
         height: 127

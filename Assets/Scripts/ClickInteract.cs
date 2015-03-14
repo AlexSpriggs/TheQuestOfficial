@@ -5,6 +5,7 @@ public class ClickInteract : MonoBehaviour {
 	
 	public GameObject player;
 
+    private bool hasBeenSpokenTo = false;
 	private Movement _Movement;
 	private PlayerBehavior _PlayerBehavior;
 	private SpriteRenderer spriterenderer;
@@ -38,7 +39,12 @@ public class ClickInteract : MonoBehaviour {
 		if (isTouchingPlayer)
 		{
 			_Movement.stopMoving();
-			_PlayerBehavior.Trigger(transform.tag, collider2D);
+
+            if (!hasBeenSpokenTo)
+            {
+                hasBeenSpokenTo = true;
+                _PlayerBehavior.Trigger(transform.tag, collider2D);
+            }
 		}
 	}
 	
@@ -66,8 +72,10 @@ public class ClickInteract : MonoBehaviour {
 
 	void OnCollisionStay2D(Collision2D col)
 	{
-		if (col.gameObject.tag == "Player")
-			isTouchingPlayer = true;
+        if (col.gameObject.tag == "Player")
+        {
+            isTouchingPlayer = true;
+        }
 	}
 
 	void OnCollisionExit2D(Collision2D col)

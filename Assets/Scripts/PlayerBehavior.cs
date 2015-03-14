@@ -103,6 +103,10 @@ public class PlayerBehavior : MonoBehaviour {
 				isTalking = true;
 				npcColl = col;
 				DialogTriggered();
+
+                ClickInteract _ClickInteract = col.gameObject.GetComponent<ClickInteract>();
+                if (_ClickInteract != null)
+                    GameObject.Destroy(_ClickInteract);
 			}
 			break;
 		}

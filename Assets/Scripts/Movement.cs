@@ -110,8 +110,8 @@ public class Movement : MonoBehaviour
         {
             _PlayerBehavior.Trigger(targetColliderTag, col.gameObject.GetComponent<Collider2D>());
         }
-        else
-            targetColliderTag = "";
+       
+        targetColliderTag = "";
 	}
 
 	public void setTargetColliderTag(string tag) { targetColliderTag = tag; }
