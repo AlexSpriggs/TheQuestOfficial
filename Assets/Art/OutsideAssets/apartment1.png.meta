@@ -1,14 +1,11 @@
 fileFormatVersion: 2
-guid: b1b3d1ec0fd09ea4f918b06a50624948
+guid: f4fbaf50d01cb554198a1a7bd05d4988
 TextureImporter:
-  fileIDToRecycleName:
-    21300000: plants1
-    21300002: plants1_0
-    21300004: plants1_1
+  fileIDToRecycleName: {}
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
-    enableMipMap: 0
+    enableMipMap: 1
     linearTexture: 0
     correctGamma: 0
     fadeOut: 0
@@ -28,13 +25,13 @@ TextureImporter:
   maxTextureSize: 1024
   textureSettings:
     filterMode: -1
-    aniso: 1
+    aniso: -1
     mipBias: -1
-    wrapMode: 1
+    wrapMode: -1
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -45,26 +42,6 @@ TextureImporter:
   textureType: 8
   buildTargetSettings: []
   spriteSheet:
-    sprites:
-    - name: plants1_0
-      rect:
-        serializedVersion: 2
-        x: 18
-        y: 87
-        width: 51
-        height: 51
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: plants1_1
-      rect:
-        serializedVersion: 2
-        x: 89
-        y: 27
-        width: 62
-        height: 49
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+    sprites: []
   spritePackingTag: 
   userData: 

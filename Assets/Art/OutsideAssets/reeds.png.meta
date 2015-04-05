@@ -1,14 +1,13 @@
 fileFormatVersion: 2
-guid: b1b3d1ec0fd09ea4f918b06a50624948
+guid: 602f5bcb1bb945647b04603a21fd4b73
 TextureImporter:
   fileIDToRecycleName:
-    21300000: plants1
-    21300002: plants1_0
-    21300004: plants1_1
+    21300000: reeds_0
+    21300002: reeds_1
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
-    enableMipMap: 0
+    enableMipMap: 1
     linearTexture: 0
     correctGamma: 0
     fadeOut: 0
@@ -28,7 +27,7 @@ TextureImporter:
   maxTextureSize: 1024
   textureSettings:
     filterMode: -1
-    aniso: 1
+    aniso: 16
     mipBias: -1
     wrapMode: 1
   nPOTScale: 0
@@ -46,23 +45,23 @@ TextureImporter:
   buildTargetSettings: []
   spriteSheet:
     sprites:
-    - name: plants1_0
+    - name: reeds_0
       rect:
         serializedVersion: 2
-        x: 18
-        y: 87
-        width: 51
-        height: 51
+        x: 0
+        y: 0
+        width: 32
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: plants1_1
+    - name: reeds_1
       rect:
         serializedVersion: 2
-        x: 89
-        y: 27
-        width: 62
-        height: 49
+        x: 32
+        y: 0
+        width: 32
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
