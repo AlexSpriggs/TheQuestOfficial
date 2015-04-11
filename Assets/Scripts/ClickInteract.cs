@@ -38,11 +38,11 @@ public class ClickInteract : MonoBehaviour {
 		_Movement.setTargetColliderTag (transform.tag);
 		if (isTouchingPlayer)
 		{
-			_Movement.stopMoving();
+			// _Movement.stopMoving();
 
             if (!hasBeenSpokenTo)
             {
-                hasBeenSpokenTo = true;
+                // hasBeenSpokenTo = true;
                 _PlayerBehavior.Trigger(transform.tag, collider2D);
             }
 		}
@@ -83,7 +83,7 @@ public class ClickInteract : MonoBehaviour {
 		if (col.gameObject.tag == "Player")
 		{
 			isTouchingPlayer = false;
-			_Movement.setTargetColliderTag ("");
+			// _Movement.setTargetColliderTag ("");
 		}
 	}
 }

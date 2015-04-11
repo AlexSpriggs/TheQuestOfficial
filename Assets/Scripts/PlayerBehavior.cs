@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class PlayerBehavior : MonoBehaviour {
 
@@ -36,6 +37,12 @@ public class PlayerBehavior : MonoBehaviour {
 
     private bool isTalking = false;
     private bool isDialogTyping = false;		// is the npc's dialog currently being "typed out" on the screen
+
+    // Player Color Variables
+    public List<RuntimeAnimatorController> anim_controllers;
+    private Animator animator;
+    private int colorLevel = 0;
+    private bool isDebug = false;
 #endregion
 
 	void Start()
@@ -52,6 +59,7 @@ public class PlayerBehavior : MonoBehaviour {
 	        _Movement = gameObject.GetComponent<Movement>();
 	        _TypewriterEffect = dialogBox.GetComponent<TypewriterEffect>();
 	        dialogUILabel = dialogBox.GetComponent<UILabel>();
+            animator = gameObject.GetComponent<Animator>();
 		}
 	}
 
@@ -79,6 +87,10 @@ public class PlayerBehavior : MonoBehaviour {
         {
 			DialogTriggered();
         }
+
+        // Debug only
+        if (isDebug && Input.GetMouseButtonDown(1) && animator != null)
+            UpdateAnimator();
 	}
 
 	public void Trigger(string tag, Collider2D col) 
@@ -104,9 +116,13 @@ public class PlayerBehavior : MonoBehaviour {
 				npcColl = col;
 				DialogTriggered();
 
+                // Prevent player from talking to NPC a second time by destroying the interaction script
                 ClickInteract _ClickInteract = col.gameObject.GetComponent<ClickInteract>();
                 if (_ClickInteract != null)
                     GameObject.Destroy(_ClickInteract);
+
+                if (animator != null)
+                    UpdateAnimator();
 			}
 			break;
 		}
@@ -215,7 +231,7 @@ public class PlayerBehavior : MonoBehaviour {
 				isDialogTyping = false;
 				isTalking = false;
 			}
-			//_TypewriterEffect.ResetToBeginning();
+			// _TypewriterEffect.ResetToBeginning();
 		}
 		else if (isDialogTyping)    // otherwise, if a new string of dialog is being "typed out", finish the typing effect
 		{			
@@ -227,5 +243,20 @@ public class PlayerBehavior : MonoBehaviour {
 	public void dialogStatusUpdate() {
 		isDialogTyping = false;
 	}
+
+    // Update the animator's runtime animation controller, i.e. the player color
+    void UpdateAnimator()
+    {
+        if (colorLevel + 1 < anim_controllers.Count)
+        {
+            ++colorLevel;
+            animator.runtimeAnimatorController = anim_controllers[colorLevel];
+            
+            // Forcing update on the animator variables do not seem to do anything
+            // e.g. if player is facing right when the animator changes its controller, the player animation state reverts back to its default (facing front) 
+            // _Movement.UpdateAnimatorMovementVars();
+            // _Movement.UpdateAnimatorIsMoving();
+        }
+    }
 #endregion
 }

@@ -1,0 +1,752 @@
+fileFormatVersion: 2
+guid: f39c951d7053f3f4e883fb7f7c14f32a
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: questgirl_idle_bw+2
+    21300002: questgirl_idle_bw+2_0
+    21300004: questgirl_idle_bw+2_1
+    21300006: questgirl_idle_bw+2_2
+    21300008: questgirl_idle_bw+2_3
+    21300010: questgirl_idle_bw+2_4
+    21300012: questgirl_idle_bw+2_5
+    21300014: questgirl_idle_bw+2_6
+    21300016: questgirl_idle_bw+2_7
+    21300018: questgirl_idle_bw+2_8
+    21300020: questgirl_idle_bw+2_9
+    21300022: questgirl_idle_bw+2_10
+    21300024: questgirl_idle_bw+2_11
+    21300026: questgirl_idle_bw+2_12
+    21300028: questgirl_idle_bw+2_13
+    21300030: questgirl_idle_bw+2_14
+    21300032: questgirl_idle_bw+2_15
+    21300034: questgirl_idle_bw+2_16
+    21300036: questgirl_idle_bw+2_17
+    21300038: questgirl_idle_bw+2_18
+    21300040: questgirl_idle_bw+2_19
+    21300042: questgirl_idle_bw+2_20
+    21300044: questgirl_idle_bw+2_21
+    21300046: questgirl_idle_bw+2_22
+    21300048: questgirl_idle_bw+2_23
+    21300050: questgirl_idle_bw+2_24
+    21300052: questgirl_idle_bw+2_25
+    21300054: questgirl_idle_bw+2_26
+    21300056: questgirl_idle_bw+2_27
+    21300058: questgirl_idle_bw+2_28
+    21300060: questgirl_idle_bw+2_29
+    21300062: questgirl_idle_bw+2_30
+    21300064: questgirl_idle_bw+2_31
+    21300066: questgirl_idle_bw+2_32
+    21300068: questgirl_idle_bw+2_33
+    21300070: questgirl_idle_bw+2_34
+    21300072: questgirl_idle_bw+2_35
+    21300074: questgirl_idle_bw+2_36
+    21300076: questgirl_idle_bw+2_37
+    21300078: questgirl_idle_bw+2_38
+    21300080: questgirl_idle_bw+2_39
+    21300082: questgirl_idle_bw+2_40
+    21300084: questgirl_idle_bw+2_41
+    21300086: questgirl_idle_bw+2_42
+    21300088: questgirl_idle_bw+2_43
+    21300090: questgirl_idle_bw+2_44
+    21300092: questgirl_idle_bw+2_45
+    21300094: questgirl_idle_bw+2_46
+    21300096: questgirl_idle_bw+2_47
+    21300098: questgirl_idle_bw+2_48
+    21300100: questgirl_idle_bw+2_49
+    21300102: questgirl_idle_bw+2_50
+    21300104: questgirl_idle_bw+2_51
+    21300106: questgirl_idle_bw+2_52
+    21300108: questgirl_idle_bw+2_53
+    21300110: questgirl_idle_bw+2_54
+    21300112: questgirl_idle_bw+2_55
+    21300114: questgirl_idle_bw+2_56
+    21300116: questgirl_idle_bw+2_57
+    21300118: questgirl_idle_bw+2_58
+    21300120: questgirl_idle_bw+2_59
+    21300122: questgirl_idle_bw+2_60
+    21300124: questgirl_idle_bw+2_61
+    21300126: questgirl_idle_bw+2_62
+    21300128: questgirl_idle_bw+2_63
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 1024
+  textureSettings:
+    filterMode: -1
+    aniso: 1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: questgirl_idle_bw+2_0
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 1139
+        width: 45
+        height: 125
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: questgirl_idle_bw+2_1
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 1139
+        width: 45
+        height: 125
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: questgirl_idle_bw+2_2
+      rect:
+        serializedVersion: 2
+        x: 376
+        y: 1139
+        width: 45
+        height: 125
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: questgirl_idle_bw+2_3
+      rect:
+        serializedVersion: 2
+        x: 536
+        y: 1139
+        width: 45
+        height: 125
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: questgirl_idle_bw+2_4
+      rect:
+        serializedVersion: 2
+        x: 696
+        y: 1139
+        width: 45
+        height: 125
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: questgirl_idle_bw+2_5
+      rect:
+        serializedVersion: 2
+        x: 856
+        y: 1139
+        width: 45
+        height: 125
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: questgirl_idle_bw+2_6
+      rect:
+        serializedVersion: 2
+        x: 1016
+        y: 1139
+        width: 45
+        height: 125
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: questgirl_idle_bw+2_7
+      rect:
+        serializedVersion: 2
+        x: 1176
+        y: 1139
+        width: 45
+        height: 125
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: questgirl_idle_bw+2_8
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 979
+        width: 45
+        height: 125
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: questgirl_idle_bw+2_9
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 979
+        width: 45
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: questgirl_idle_bw+2_10
+      rect:
+        serializedVersion: 2
+        x: 376
+        y: 979
+        width: 45
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: questgirl_idle_bw+2_11
+      rect:
+        serializedVersion: 2
+        x: 536
+        y: 979
+        width: 45
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: questgirl_idle_bw+2_12
+      rect:
+        serializedVersion: 2
+        x: 696
+        y: 979
+        width: 45
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: questgirl_idle_bw+2_13
+      rect:
+        serializedVersion: 2
+        x: 856
+        y: 979
+        width: 45
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: questgirl_idle_bw+2_14
+      rect:
+        serializedVersion: 2
+        x: 1016
+        y: 979
+        width: 45
+        height: 125
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: questgirl_idle_bw+2_15
+      rect:
+        serializedVersion: 2
+        x: 1176
+        y: 979
+        width: 45
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: questgirl_idle_bw+2_16
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 819
+        width: 47
+        height: 125
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: questgirl_idle_bw+2_17
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 819
+        width: 47
+        height: 125
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: questgirl_idle_bw+2_18
+      rect:
+        serializedVersion: 2
+        x: 371
+        y: 819
+        width: 47
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: questgirl_idle_bw+2_19
+      rect:
+        serializedVersion: 2
+        x: 531
+        y: 819
+        width: 47
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: questgirl_idle_bw+2_20
+      rect:
+        serializedVersion: 2
+        x: 691
+        y: 819
+        width: 47
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: questgirl_idle_bw+2_21
+      rect:
+        serializedVersion: 2
+        x: 851
+        y: 819
+        width: 47
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: questgirl_idle_bw+2_22
+      rect:
+        serializedVersion: 2
+        x: 1011
+        y: 819
+        width: 47
+        height: 125
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: questgirl_idle_bw+2_23
+      rect:
+        serializedVersion: 2
+        x: 1171
+        y: 819
+        width: 47
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: questgirl_idle_bw+2_24
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 659
+        width: 47
+        height: 125
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: questgirl_idle_bw+2_25
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 659
+        width: 47
+        height: 125
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: questgirl_idle_bw+2_26
+      rect:
+        serializedVersion: 2
+        x: 371
+        y: 659
+        width: 47
+        height: 125
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: questgirl_idle_bw+2_27
+      rect:
+        serializedVersion: 2
+        x: 531
+        y: 659
+        width: 47
+        height: 125
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: questgirl_idle_bw+2_28
+      rect:
+        serializedVersion: 2
+        x: 691
+        y: 659
+        width: 47
+        height: 125
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: questgirl_idle_bw+2_29
+      rect:
+        serializedVersion: 2
+        x: 851
+        y: 659
+        width: 47
+        height: 125
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: questgirl_idle_bw+2_30
+      rect:
+        serializedVersion: 2
+        x: 1011
+        y: 659
+        width: 47
+        height: 125
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: questgirl_idle_bw+2_31
+      rect:
+        serializedVersion: 2
+        x: 1171
+        y: 659
+        width: 47
+        height: 125
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: questgirl_idle_bw+2_32
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 499
+        width: 45
+        height: 125
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: questgirl_idle_bw+2_33
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 499
+        width: 45
+        height: 125
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: questgirl_idle_bw+2_34
+      rect:
+        serializedVersion: 2
+        x: 376
+        y: 499
+        width: 45
+        height: 125
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: questgirl_idle_bw+2_35
+      rect:
+        serializedVersion: 2
+        x: 536
+        y: 499
+        width: 45
+        height: 125
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: questgirl_idle_bw+2_36
+      rect:
+        serializedVersion: 2
+        x: 696
+        y: 499
+        width: 45
+        height: 125
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: questgirl_idle_bw+2_37
+      rect:
+        serializedVersion: 2
+        x: 856
+        y: 499
+        width: 45
+        height: 125
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: questgirl_idle_bw+2_38
+      rect:
+        serializedVersion: 2
+        x: 1016
+        y: 499
+        width: 45
+        height: 125
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: questgirl_idle_bw+2_39
+      rect:
+        serializedVersion: 2
+        x: 1176
+        y: 499
+        width: 45
+        height: 125
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: questgirl_idle_bw+2_40
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 339
+        width: 45
+        height: 125
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: questgirl_idle_bw+2_41
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 339
+        width: 45
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: questgirl_idle_bw+2_42
+      rect:
+        serializedVersion: 2
+        x: 376
+        y: 339
+        width: 45
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: questgirl_idle_bw+2_43
+      rect:
+        serializedVersion: 2
+        x: 536
+        y: 339
+        width: 45
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: questgirl_idle_bw+2_44
+      rect:
+        serializedVersion: 2
+        x: 696
+        y: 339
+        width: 45
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: questgirl_idle_bw+2_45
+      rect:
+        serializedVersion: 2
+        x: 856
+        y: 339
+        width: 45
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: questgirl_idle_bw+2_46
+      rect:
+        serializedVersion: 2
+        x: 1016
+        y: 339
+        width: 45
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: questgirl_idle_bw+2_47
+      rect:
+        serializedVersion: 2
+        x: 1176
+        y: 339
+        width: 45
+        height: 125
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: questgirl_idle_bw+2_48
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 179
+        width: 47
+        height: 125
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: questgirl_idle_bw+2_49
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 179
+        width: 47
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: questgirl_idle_bw+2_50
+      rect:
+        serializedVersion: 2
+        x: 382
+        y: 179
+        width: 47
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: questgirl_idle_bw+2_51
+      rect:
+        serializedVersion: 2
+        x: 542
+        y: 179
+        width: 47
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: questgirl_idle_bw+2_52
+      rect:
+        serializedVersion: 2
+        x: 702
+        y: 179
+        width: 47
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: questgirl_idle_bw+2_53
+      rect:
+        serializedVersion: 2
+        x: 862
+        y: 179
+        width: 47
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: questgirl_idle_bw+2_54
+      rect:
+        serializedVersion: 2
+        x: 1022
+        y: 179
+        width: 47
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: questgirl_idle_bw+2_55
+      rect:
+        serializedVersion: 2
+        x: 1182
+        y: 179
+        width: 47
+        height: 125
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: questgirl_idle_bw+2_56
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 19
+        width: 47
+        height: 125
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: questgirl_idle_bw+2_57
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 19
+        width: 47
+        height: 125
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: questgirl_idle_bw+2_58
+      rect:
+        serializedVersion: 2
+        x: 382
+        y: 19
+        width: 47
+        height: 125
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: questgirl_idle_bw+2_59
+      rect:
+        serializedVersion: 2
+        x: 542
+        y: 19
+        width: 47
+        height: 125
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: questgirl_idle_bw+2_60
+      rect:
+        serializedVersion: 2
+        x: 702
+        y: 19
+        width: 47
+        height: 125
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: questgirl_idle_bw+2_61
+      rect:
+        serializedVersion: 2
+        x: 862
+        y: 19
+        width: 47
+        height: 125
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: questgirl_idle_bw+2_62
+      rect:
+        serializedVersion: 2
+        x: 1022
+        y: 19
+        width: 47
+        height: 125
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: questgirl_idle_bw+2_63
+      rect:
+        serializedVersion: 2
+        x: 1182
+        y: 19
+        width: 47
+        height: 125
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
