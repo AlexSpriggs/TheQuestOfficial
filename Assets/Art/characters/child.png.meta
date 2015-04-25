@@ -3,6 +3,38 @@ guid: fd359cc125f8b405ebeda031a13e241f
 TextureImporter:
   fileIDToRecycleName:
     21300000: child
+    21300002: child_0
+    21300004: child_1
+    21300006: child_2
+    21300008: child_3
+    21300010: child_4
+    21300012: child_5
+    21300014: child_6
+    21300016: child_7
+    21300018: child_8
+    21300020: child_9
+    21300022: child_10
+    21300024: child_11
+    21300026: child_12
+    21300028: child_13
+    21300030: child_14
+    21300032: child_15
+    21300034: child_16
+    21300036: child_17
+    21300038: child_18
+    21300040: child_19
+    21300042: child_20
+    21300044: child_21
+    21300046: child_22
+    21300048: child_23
+    21300050: child_24
+    21300052: child_25
+    21300054: child_26
+    21300056: child_27
+    21300058: child_28
+    21300060: child_29
+    21300062: child_30
+    21300064: child_31
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -26,13 +58,13 @@ TextureImporter:
   maxTextureSize: 1024
   textureSettings:
     filterMode: -1
-    aniso: -1
+    aniso: 1
     mipBias: -1
-    wrapMode: -1
+    wrapMode: 1
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -43,6 +75,326 @@ TextureImporter:
   textureType: 8
   buildTargetSettings: []
   spriteSheet:
-    sprites: []
+    sprites:
+    - name: child_0
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 164
+        width: 29
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: child_1
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 176
+        width: 11
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: child_2
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 164
+        width: 29
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: child_3
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 176
+        width: 11
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: child_4
+      rect:
+        serializedVersion: 2
+        x: 302
+        y: 164
+        width: 29
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: child_5
+      rect:
+        serializedVersion: 2
+        x: 331
+        y: 176
+        width: 11
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: child_6
+      rect:
+        serializedVersion: 2
+        x: 430
+        y: 164
+        width: 29
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: child_7
+      rect:
+        serializedVersion: 2
+        x: 459
+        y: 176
+        width: 11
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: child_8
+      rect:
+        serializedVersion: 2
+        x: 558
+        y: 164
+        width: 29
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: child_9
+      rect:
+        serializedVersion: 2
+        x: 587
+        y: 176
+        width: 11
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: child_10
+      rect:
+        serializedVersion: 2
+        x: 686
+        y: 164
+        width: 29
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: child_11
+      rect:
+        serializedVersion: 2
+        x: 715
+        y: 176
+        width: 11
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: child_12
+      rect:
+        serializedVersion: 2
+        x: 814
+        y: 164
+        width: 29
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: child_13
+      rect:
+        serializedVersion: 2
+        x: 843
+        y: 176
+        width: 11
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: child_14
+      rect:
+        serializedVersion: 2
+        x: 942
+        y: 164
+        width: 29
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: child_15
+      rect:
+        serializedVersion: 2
+        x: 971
+        y: 176
+        width: 11
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: child_16
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 35
+        width: 29
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: child_17
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 48
+        width: 11
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: child_18
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 35
+        width: 29
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: child_19
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 48
+        width: 11
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: child_20
+      rect:
+        serializedVersion: 2
+        x: 302
+        y: 35
+        width: 29
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: child_21
+      rect:
+        serializedVersion: 2
+        x: 331
+        y: 48
+        width: 11
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: child_22
+      rect:
+        serializedVersion: 2
+        x: 430
+        y: 35
+        width: 29
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: child_23
+      rect:
+        serializedVersion: 2
+        x: 459
+        y: 48
+        width: 11
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: child_24
+      rect:
+        serializedVersion: 2
+        x: 558
+        y: 35
+        width: 29
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: child_25
+      rect:
+        serializedVersion: 2
+        x: 587
+        y: 48
+        width: 11
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: child_26
+      rect:
+        serializedVersion: 2
+        x: 686
+        y: 35
+        width: 29
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: child_27
+      rect:
+        serializedVersion: 2
+        x: 715
+        y: 48
+        width: 11
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: child_28
+      rect:
+        serializedVersion: 2
+        x: 814
+        y: 35
+        width: 29
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: child_29
+      rect:
+        serializedVersion: 2
+        x: 843
+        y: 48
+        width: 11
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: child_30
+      rect:
+        serializedVersion: 2
+        x: 942
+        y: 35
+        width: 29
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: child_31
+      rect:
+        serializedVersion: 2
+        x: 971
+        y: 48
+        width: 11
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 

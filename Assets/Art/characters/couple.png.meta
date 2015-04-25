@@ -3,6 +3,22 @@ guid: 4d69dd1d47f7141e19b58f80907c3e51
 TextureImporter:
   fileIDToRecycleName:
     21300000: couple
+    21300002: couple_0
+    21300004: couple_1
+    21300006: couple_2
+    21300008: couple_3
+    21300010: couple_4
+    21300012: couple_5
+    21300014: couple_6
+    21300016: couple_7
+    21300018: couple_8
+    21300020: couple_9
+    21300022: couple_10
+    21300024: couple_11
+    21300026: couple_12
+    21300028: couple_13
+    21300030: couple_14
+    21300032: couple_15
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -26,13 +42,13 @@ TextureImporter:
   maxTextureSize: 1024
   textureSettings:
     filterMode: -1
-    aniso: -1
+    aniso: 1
     mipBias: -1
-    wrapMode: -1
+    wrapMode: 1
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -43,6 +59,166 @@ TextureImporter:
   textureType: 8
   buildTargetSettings: []
   spriteSheet:
-    sprites: []
+    sprites:
+    - name: couple_0
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 311
+        width: 118
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: couple_1
+      rect:
+        serializedVersion: 2
+        x: 325
+        y: 311
+        width: 118
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: couple_2
+      rect:
+        serializedVersion: 2
+        x: 581
+        y: 311
+        width: 118
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: couple_3
+      rect:
+        serializedVersion: 2
+        x: 837
+        y: 311
+        width: 118
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: couple_4
+      rect:
+        serializedVersion: 2
+        x: 1093
+        y: 311
+        width: 118
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: couple_5
+      rect:
+        serializedVersion: 2
+        x: 1349
+        y: 311
+        width: 118
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: couple_6
+      rect:
+        serializedVersion: 2
+        x: 1605
+        y: 311
+        width: 118
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: couple_7
+      rect:
+        serializedVersion: 2
+        x: 1861
+        y: 311
+        width: 118
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: couple_8
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 55
+        width: 118
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: couple_9
+      rect:
+        serializedVersion: 2
+        x: 325
+        y: 55
+        width: 118
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: couple_10
+      rect:
+        serializedVersion: 2
+        x: 581
+        y: 55
+        width: 118
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: couple_11
+      rect:
+        serializedVersion: 2
+        x: 837
+        y: 55
+        width: 118
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: couple_12
+      rect:
+        serializedVersion: 2
+        x: 1093
+        y: 55
+        width: 118
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: couple_13
+      rect:
+        serializedVersion: 2
+        x: 1349
+        y: 55
+        width: 118
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: couple_14
+      rect:
+        serializedVersion: 2
+        x: 1605
+        y: 55
+        width: 118
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: couple_15
+      rect:
+        serializedVersion: 2
+        x: 1861
+        y: 55
+        width: 118
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 
