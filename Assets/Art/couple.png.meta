@@ -1,28 +1,27 @@
 fileFormatVersion: 2
-guid: 83361b167252ff44e84f9c2e8d8b1c9c
+guid: 5256f31fdec2dd747bf07afd297db41f
 TextureImporter:
   fileIDToRecycleName:
-    21300000: mountainlady
-    21300002: mountainlady_0
-    21300004: mountainlady_1
-    21300006: mountainlady_2
-    21300008: mountainlady_3
-    21300010: mountainlady_4
-    21300012: mountainlady_5
-    21300014: mountainlady_6
-    21300016: mountainlady_7
-    21300018: mountainlady_8
-    21300020: mountainlady_9
-    21300022: mountainlady_10
-    21300024: mountainlady_11
-    21300026: mountainlady_12
-    21300028: mountainlady_13
-    21300030: mountainlady_14
-    21300032: mountainlady_15
+    21300000: couple_0
+    21300002: couple_1
+    21300004: couple_2
+    21300006: couple_3
+    21300008: couple_4
+    21300010: couple_5
+    21300012: couple_6
+    21300014: couple_7
+    21300016: couple_8
+    21300018: couple_9
+    21300020: couple_10
+    21300022: couple_11
+    21300024: couple_12
+    21300026: couple_13
+    21300028: couple_14
+    21300030: couple_15
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
-    enableMipMap: 0
+    enableMipMap: 1
     linearTexture: 0
     correctGamma: 0
     fadeOut: 0
@@ -41,8 +40,8 @@ TextureImporter:
   textureFormat: -1
   maxTextureSize: 1024
   textureSettings:
-    filterMode: -1
-    aniso: -1
+    filterMode: 0
+    aniso: 16
     mipBias: -1
     wrapMode: 1
   nPOTScale: 0
@@ -60,165 +59,165 @@ TextureImporter:
   buildTargetSettings: []
   spriteSheet:
     sprites:
-    - name: mountainlady_0
+    - name: couple_0
       rect:
         serializedVersion: 2
-        x: 49
-        y: 179
-        width: 47
-        height: 117
+        x: 69
+        y: 311
+        width: 118
+        height: 124
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: mountainlady_1
+    - name: couple_1
       rect:
         serializedVersion: 2
-        x: 209
-        y: 179
-        width: 47
-        height: 117
+        x: 325
+        y: 311
+        width: 118
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: couple_2
+      rect:
+        serializedVersion: 2
+        x: 581
+        y: 311
+        width: 118
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: couple_3
+      rect:
+        serializedVersion: 2
+        x: 837
+        y: 311
+        width: 118
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: couple_4
+      rect:
+        serializedVersion: 2
+        x: 1093
+        y: 311
+        width: 118
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: couple_5
+      rect:
+        serializedVersion: 2
+        x: 1349
+        y: 311
+        width: 118
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: couple_6
+      rect:
+        serializedVersion: 2
+        x: 1605
+        y: 311
+        width: 118
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: couple_7
+      rect:
+        serializedVersion: 2
+        x: 1861
+        y: 311
+        width: 118
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: couple_8
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 55
+        width: 118
+        height: 124
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: mountainlady_2
+    - name: couple_9
       rect:
         serializedVersion: 2
-        x: 369
-        y: 179
-        width: 47
-        height: 117
+        x: 325
+        y: 55
+        width: 118
+        height: 124
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: mountainlady_3
+    - name: couple_10
       rect:
         serializedVersion: 2
-        x: 529
-        y: 179
-        width: 47
-        height: 117
+        x: 581
+        y: 55
+        width: 118
+        height: 124
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: mountainlady_4
+    - name: couple_11
       rect:
         serializedVersion: 2
-        x: 689
-        y: 179
-        width: 47
-        height: 117
+        x: 837
+        y: 55
+        width: 118
+        height: 124
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: mountainlady_5
+    - name: couple_12
       rect:
         serializedVersion: 2
-        x: 849
-        y: 179
-        width: 47
-        height: 117
+        x: 1093
+        y: 55
+        width: 118
+        height: 124
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: mountainlady_6
+    - name: couple_13
       rect:
         serializedVersion: 2
-        x: 1009
-        y: 179
-        width: 47
-        height: 117
+        x: 1349
+        y: 55
+        width: 118
+        height: 124
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: mountainlady_7
+    - name: couple_14
       rect:
         serializedVersion: 2
-        x: 1169
-        y: 179
-        width: 47
-        height: 117
+        x: 1605
+        y: 55
+        width: 118
+        height: 124
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: mountainlady_8
+    - name: couple_15
       rect:
         serializedVersion: 2
-        x: 49
-        y: 19
-        width: 47
-        height: 117
+        x: 1861
+        y: 55
+        width: 118
+        height: 124
       alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: mountainlady_9
-      rect:
-        serializedVersion: 2
-        x: 209
-        y: 19
-        width: 47
-        height: 117
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: mountainlady_10
-      rect:
-        serializedVersion: 2
-        x: 369
-        y: 19
-        width: 47
-        height: 117
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: mountainlady_11
-      rect:
-        serializedVersion: 2
-        x: 529
-        y: 19
-        width: 47
-        height: 117
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: mountainlady_12
-      rect:
-        serializedVersion: 2
-        x: 689
-        y: 19
-        width: 47
-        height: 117
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: mountainlady_13
-      rect:
-        serializedVersion: 2
-        x: 849
-        y: 19
-        width: 47
-        height: 117
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: mountainlady_14
-      rect:
-        serializedVersion: 2
-        x: 1009
-        y: 19
-        width: 47
-        height: 117
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: mountainlady_15
-      rect:
-        serializedVersion: 2
-        x: 1169
-        y: 19
-        width: 47
-        height: 117
-      alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 
