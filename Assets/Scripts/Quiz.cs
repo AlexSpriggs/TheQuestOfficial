@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor;
+//using UnityEditor;
 
 public class Quiz : MonoBehaviour
 {
@@ -11,7 +11,8 @@ public class Quiz : MonoBehaviour
 	public List<Question> curQuestions;
 	public GameManager myManager;
 	public int currentQuestion;
-	public int curCorrect;
+	public float curCorrect;
+	private float gpaTotal;
 	public GameObject player;
 	public bool QuizComplete;
 	public string BeforeQuizStartsScript;
@@ -73,6 +74,9 @@ public class Quiz : MonoBehaviour
 		secondAns.SetActive(true);
 		thirdAns.SetActive(true);
 		continueButton.SetActive(false);
+		ansOneHandle.SetCorrectAmount();
+		ansTwoHandle.SetCorrectAmount();
+		ansThreeHandle.SetCorrectAmount();
 		GoToNextQuestion (currentQuestion + 1);
 
 		//Referencing AudioScript
@@ -88,7 +92,13 @@ public class Quiz : MonoBehaviour
 		secondAns.SetActive(false);
 		thirdAns.SetActive(false);
 		quitButton.SetActive(true);
-		compLabel.text = finalScreenText;
+
+		gpaTotal = ((curCorrect/5) * 100)/25;
+
+		if(gpaTotal!=4)
+			compLabel.text = "Your GPA is: " + gpaTotal + ". " + finalScreenText;
+		else
+			compLabel.text = "Your GPA is: 4.0. " + finalScreenText;
 
 		QuizComplete = true;
 
@@ -178,7 +188,12 @@ public class Quiz : MonoBehaviour
 				EndQuiz();
 			else
 			{
-				compLabel.text = "You have failed. Try again.";
+				gpaTotal = ((curCorrect/5) * 100)/25;
+				compLabel.text = "Your GPA is: " + gpaTotal + ". " +  "You have failed. Try again.";
+				curCorrect = 0;
+				ansOneHandle.SetCorrectAmount();
+				ansTwoHandle.SetCorrectAmount();
+				ansThreeHandle.SetCorrectAmount();
 				currentQuestion = -1;
 				firstAns.SetActive(false);
 				secondAns.SetActive(false);

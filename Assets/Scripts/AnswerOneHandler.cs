@@ -7,6 +7,7 @@ public class AnswerOneHandler : MonoBehaviour {
 
 	public Quiz curQuiz;
 	public GameManager myManager;
+	private float currentCorrect;
 
 	public enum answerType
 	{
@@ -23,6 +24,8 @@ public class AnswerOneHandler : MonoBehaviour {
 		myManager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
 
 		SM = GameObject.FindGameObjectWithTag ("SoundManager").GetComponent<soundManager>();
+
+		SetCorrectAmount();
 	}
 	public void OnClick()
 	{
@@ -34,7 +37,8 @@ public class AnswerOneHandler : MonoBehaviour {
 		switch(myType)
 		{
 		case answerType.correct:
-			curQuiz.curCorrect++;
+			if(currentCorrect == curQuiz.curCorrect){
+				curQuiz.curCorrect++;}
 			myManager.StressLevel--;
 			if(myManager.myState == GameManager.ComputerStates.Happy)
 				curQuiz.AfterAnswer(curQuiz.curQuestions[curQuiz.currentQuestion].happyResponses[0]);
@@ -55,5 +59,10 @@ public class AnswerOneHandler : MonoBehaviour {
 				curQuiz.AfterAnswer(curQuiz.curQuestions[curQuiz.currentQuestion].madResponses[0]);
 			break;
 		}
+	}
+
+	public void SetCorrectAmount()
+	{
+		currentCorrect = curQuiz.curCorrect;
 	}
 }
