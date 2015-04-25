@@ -2,6 +2,12 @@
 using System.Collections;
 using System.Collections.Generic;
 
+/*
+ * NOTE: For updating player's colors in the outside scene
+ * - Make sure that the animators "player_bw+0, player_bw+1,..., player_bw+4" is placed
+ *   in the Player Behavior inspector under Anim_controllers
+ */
+
 public class PlayerBehavior : MonoBehaviour {
 
 	private soundManager SM;
@@ -60,6 +66,7 @@ public class PlayerBehavior : MonoBehaviour {
 	        _TypewriterEffect = dialogBox.GetComponent<TypewriterEffect>();
 	        dialogUILabel = dialogBox.GetComponent<UILabel>();
             animator = gameObject.GetComponent<Animator>();
+            animator.runtimeAnimatorController = anim_controllers[colorLevel];
 		}
 	}
 
