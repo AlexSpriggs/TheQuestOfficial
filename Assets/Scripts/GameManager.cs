@@ -8,7 +8,7 @@ public class GameManager : MonoBehaviour {
 	public int HappyResponseSwitch;
 	private GameObject doorTrigger;
     private GameObject room_openwindow;
-	private bool isFirstPlaythrough = true;
+	public bool isFirstPlaythrough = true;
 
 	public enum ComputerStates
 	{

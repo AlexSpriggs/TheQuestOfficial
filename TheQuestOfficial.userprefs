@@ -1,13 +1,12 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/GameManager.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Audio/musicManager.cs">
     <Files>
-      <File FileName="Assets/Scripts/CompBehavior.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Quiz.cs" Line="101" Column="22" />
-      <File FileName="Assets/Scripts/GameManager.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/AnswerOneHandler.cs" Line="41" Column="27" />
-      <File FileName="Assets/Scripts/AnswerThreeHandler.cs" Line="40" Column="4" />
-      <File FileName="Assets/Scripts/AnswerTwoHandler.cs" Line="41" Column="27" />
+      <File FileName="Assets/Audio/soundManager.cs" Line="24" Column="2" />
+      <File FileName="Assets/Scripts/PlayerBehavior.cs" Line="27" Column="8" />
+      <File FileName="Assets/NGUI/Scripts/Interaction/TypewriterEffect.cs" Line="152" Column="6" />
+      <File FileName="Assets/Audio/musicManager.cs" Line="53" Column="70" />
+      <File FileName="Assets/Scripts/GameManager.cs" Line="11" Column="8" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

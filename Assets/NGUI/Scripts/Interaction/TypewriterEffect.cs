@@ -15,6 +15,13 @@ using System.Collections.Generic;
 [AddComponentMenu("NGUI/Interaction/Typewriter Effect")]
 public class TypewriterEffect : MonoBehaviour
 {
+
+	private soundManager SM;
+
+	void Start(){
+		SM = GameObject.FindGameObjectWithTag("SoundManager").GetComponent<soundManager>();
+	}
+
 	static public TypewriterEffect current;
 
 	struct FadeEntry
@@ -139,6 +146,11 @@ public class TypewriterEffect : MonoBehaviour
 
 		while (mCurrentOffset < mFullText.Length && mNextChar <= RealTime.time)
 		{
+			//Audio for Text
+			SM.isTextScrolling = true;
+			SM.NPCSounds();
+			//SM.isTextScrolling = false;
+
 			int lastOffset = mCurrentOffset;
 			charsPerSecond = Mathf.Max(1, charsPerSecond);
 

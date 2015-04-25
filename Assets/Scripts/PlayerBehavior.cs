@@ -24,7 +24,7 @@ public class PlayerBehavior : MonoBehaviour {
 	public bool OutsideScene = false;
 	
 	private bool sceneStarting = true;      // Whether or not the scene is still fading in.
-	private bool sceneEnding = false;
+	public bool sceneEnding = false;
 	private int nextSceneNumber;
 	private const int outsideSceneNumber = 4;
 	private GameManager _GameManager;
@@ -165,6 +165,11 @@ public class PlayerBehavior : MonoBehaviour {
 	
 	void DoorTriggered() 
 	{
+		//Audio for Door
+		SM.doorOpen = true;
+		SM.BedroomSounds();
+		SM.doorOpen = false;
+
 		OutsideScene = true;
 		sceneEnding = true;
 	}
