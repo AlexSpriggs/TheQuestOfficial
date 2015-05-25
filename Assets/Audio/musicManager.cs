@@ -3,27 +3,33 @@ using System.Collections;
 
 public class musicManager : MonoBehaviour {
 
-	public AudioSource musicSource;
+	public AudioSource musicSource1;
 	public AudioClip insideMusic;
 	public AudioClip outsideMusic;
 
 	public bool havePlayerBehaviorScript = false;
 
-	public bool isLowerVolume = true;
-	public bool isRaiseVolume = true;
-
+	//for lowering the inside music
+	private bool isLowerVolume = true;
+	//checks if outside music can play
+	private bool isOutsideMusicPlay = false;
+	
 	private GameManager GM;
 	private PlayerBehavior PB;
 
+	void Awake(){
+		DontDestroyOnLoad (transform.gameObject);
+	}
+
 	// Use this for initialization
 	void Start () {
-		musicSource = (AudioSource)gameObject.AddComponent <AudioSource>();
+		musicSource1 = (AudioSource)gameObject.AddComponent <AudioSource>();
 
 		GM = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
 
-
-
-		insideMusicFunction();
+		if (Application.loadedLevel != 4) {
+			insideMusicFunction ();
+		}
 	}
 	
 	// Update is called once per frame
@@ -33,46 +39,47 @@ public class musicManager : MonoBehaviour {
 			havePlayerBehaviorScript = true;
 		}
 
-		swapMusic();
+		if (isLowerVolume == true) {
+			swapMusic ();
+		}
+		if (Application.loadedLevel == 4) {
+			outsideMusicFunction ();		
+		}
 
-		//scene ending
+		print("Music Volume: " + musicSource1.volume);
+		print ("Is Music Playing: " + musicSource1.isPlaying);
+		print ("Is Volume Lowering: " + isLowerVolume);
+		print ("Is Music playing on awake: " + musicSource1.playOnAwake);
 	}
 
 	public void insideMusicFunction(){
-		musicSource.clip = insideMusic;
-		musicSource.Play();
-		musicSource.loop = true;
+		if (Application.loadedLevel != 4) {
+			musicSource1.clip = insideMusic;
+			musicSource1.Play ();
+			musicSource1.loop = true;
+		}
 	}
 
 	public void outsideMusicFunction(){
-		musicSource.clip = outsideMusic;
-		musicSource.Play();
-		musicSource.loop = true;
+		if (isOutsideMusicPlay == true) {
+			musicSource1.clip = outsideMusic;
+			musicSource1.volume = 0.5f;
+			musicSource1.Play ();
+			musicSource1.loop = true;
+			isOutsideMusicPlay = false;
+		}
 	}
 
-	//TODO FIGURE OUT HOW TO GET MUSIC VOLUME TO LOWER WHEN TRIGGERED TO
-
 	public void swapMusic(){
-		if (GM.isFirstPlaythrough == false) {
-			if(isLowerVolume == true){
-			print("asdjfkljakdsdfdfddfdfdfdfdf");
-			musicSource.volume -= 0.3f * Time.deltaTime;
-			if (musicSource.volume < 0f) {
-				musicSource.volume = 0f;
-				isLowerVolume = false;
-			}
-			}
-		}
-		if (PB.sceneEnding == true) {
-			if (isRaiseVolume == true) {
-				print ("adsjklfjlk;asd");
-				musicSource.volume += 0.3f * Time.deltaTime;
-				if (musicSource.volume >= 0.5f) {
-					musicSource.volume = 0.5f;
-					isRaiseVolume = false;
+		if (GM.isFirstPlaythrough == false && PB.sceneEnding == true && isLowerVolume == true) {
+				musicSource1.volume -= 0.3f * Time.deltaTime;
+				if (musicSource1.volume <= 0f && isLowerVolume == true) {
+					musicSource1.volume = 0f;
+					musicSource1.Pause();
+					musicSource1.volume = 0.5f;
+					isLowerVolume = false;
+					isOutsideMusicPlay = true;
 				}
-				outsideMusicFunction ();
-			}
 		}
 	}
 }

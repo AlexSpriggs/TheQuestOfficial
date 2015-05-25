@@ -11,28 +11,36 @@ public class soundManager : MonoBehaviour {
 
 	public bool isTextScrolling = false;
 
-	public AudioSource soundSource;
+	public AudioSource soundSource1;
+	public AudioSource soundSource2;
+	public AudioSource soundSource3;
 	public AudioClip clickSound;
 	public AudioClip computerOn;
 	//public AudioClip dialogSound;
 	public AudioClip doorSound;
 	public AudioClip textScrollingSound;
 
+	void Awake(){
+		DontDestroyOnLoad (transform.gameObject);
+	}
+
 	void Start(){
-		soundSource = (AudioSource)gameObject.AddComponent <AudioSource>();
+		soundSource1 = (AudioSource)gameObject.AddComponent <AudioSource>();
+		soundSource2 = (AudioSource)gameObject.AddComponent <AudioSource>();
+		soundSource3 = (AudioSource)gameObject.AddComponent <AudioSource>();
 	}
 
 	public void GUISounds(){
 		if (isClickSound == true) {
-			soundSource.clip = clickSound;
-			soundSource.PlayOneShot(clickSound);
+			soundSource1.clip = clickSound;
+			soundSource1.PlayOneShot(clickSound);
 			isClickSound = false;
 			print("balls");
 		}
 
 		if (isComputerOn == true) {
-			soundSource.clip = computerOn;
-			soundSource.PlayOneShot(computerOn);
+			soundSource2.clip = computerOn;
+			soundSource2.PlayOneShot(computerOn);
 			isComputerOn = false;
 			print("balls");
 		}
@@ -47,8 +55,8 @@ public class soundManager : MonoBehaviour {
 
 	public void BedroomSounds(){
 		if (doorOpen == true) {
-			soundSource.clip = doorSound;
-			soundSource.PlayOneShot(doorSound);
+			soundSource3.clip = doorSound;
+			soundSource3.PlayOneShot(doorSound);
 			isClickSound = false;
 			print("balls");
 		}
@@ -56,8 +64,8 @@ public class soundManager : MonoBehaviour {
 
 	public void NPCSounds(){
 		if(isTextScrolling == true){
-			soundSource.clip = textScrollingSound;
-			soundSource.PlayOneShot(textScrollingSound);
+			soundSource1.clip = textScrollingSound;
+			soundSource1.PlayOneShot(textScrollingSound);
 			isTextScrolling = false;
 			print ("doing the thing");
 		}

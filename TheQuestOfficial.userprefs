@@ -1,26 +1,9 @@
 ﻿<Properties>
-<<<<<<< Updated upstream
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Audio/musicManager.cs">
     <Files>
-      <File FileName="Assets/Audio/soundManager.cs" Line="24" Column="2" />
-      <File FileName="Assets/Scripts/PlayerBehavior.cs" Line="27" Column="8" />
-      <File FileName="Assets/NGUI/Scripts/Interaction/TypewriterEffect.cs" Line="152" Column="6" />
-      <File FileName="Assets/Audio/musicManager.cs" Line="53" Column="70" />
-      <File FileName="Assets/Scripts/GameManager.cs" Line="11" Column="8" />
-=======
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/NGUI/Scripts/Interaction/TypewriterEffect.cs">
-    <Files>
-      <File FileName="Assets/Scripts/CompBehavior.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Quiz.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/GameManager.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/AnswerOneHandler.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/AnswerThreeHandler.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/AnswerTwoHandler.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/PlayerBehavior.cs" Line="1" Column="1" />
-      <File FileName="Assets/NGUI/Scripts/Interaction/TypewriterEffect.cs" Line="141" Column="4" />
->>>>>>> Stashed changes
+      <File FileName="Assets/Audio/musicManager.cs" Line="73" Column="26" />
+      <File FileName="Assets/Audio/soundManager.cs" Line="25" Column="3" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
