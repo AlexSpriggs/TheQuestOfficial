@@ -43,7 +43,7 @@ public class ClickInteract : MonoBehaviour {
             if (!hasBeenSpokenTo)
             {
                 // hasBeenSpokenTo = true;
-                _PlayerBehavior.Trigger(transform.tag, collider2D);
+                _PlayerBehavior.Trigger(transform.tag, GetComponent<Collider2D>());
             }
 		}
 	}

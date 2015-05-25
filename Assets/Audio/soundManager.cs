@@ -19,7 +19,7 @@ public class soundManager : MonoBehaviour {
 	public AudioClip textScrollingSound;
 
 	void Start(){
-		soundSource = (AudioSource)gameObject.AddComponent ("AudioSource");
+		soundSource = (AudioSource)gameObject.AddComponent <AudioSource>();
 	}
 
 	public void GUISounds(){

@@ -17,7 +17,7 @@ public class musicManager : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		musicSource = (AudioSource)gameObject.AddComponent ("AudioSource");
+		musicSource = (AudioSource)gameObject.AddComponent <AudioSource>();
 
 		GM = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
 

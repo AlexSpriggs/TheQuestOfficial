@@ -74,9 +74,9 @@ public class PlayerBehavior : MonoBehaviour {
 	{
 		if (!isOutside)
 		{
-			fader.guiTexture.color = Color.black;
+			fader.GetComponent<GUITexture>().color = Color.black;
 			// Set the texture so that it is the the size of the screen and covers it.
-			fader.guiTexture.pixelInset = new Rect(0f, 0f, Screen.width, Screen.height);
+			fader.GetComponent<GUITexture>().pixelInset = new Rect(0f, 0f, Screen.width, Screen.height);
 		}
 	}
 
@@ -177,13 +177,13 @@ public class PlayerBehavior : MonoBehaviour {
 	void FadeToClear ()
 	{
 		// Lerp the colour of the texture between itself and transparent.
-		fader.guiTexture.color = Color.Lerp(fader.guiTexture.color, Color.clear, fadeSpeed * Time.deltaTime);
+		fader.GetComponent<GUITexture>().color = Color.Lerp(fader.GetComponent<GUITexture>().color, Color.clear, fadeSpeed * Time.deltaTime);
 	}
 
 	void FadeToBlack ()
 	{
 		// Lerp the colour of the texture between itself and black.
-		fader.guiTexture.color = Color.Lerp(fader.guiTexture.color, Color.black, fadeSpeed * Time.deltaTime);
+		fader.GetComponent<GUITexture>().color = Color.Lerp(fader.GetComponent<GUITexture>().color, Color.black, fadeSpeed * Time.deltaTime);
 	}
 	
 	void StartScene ()
@@ -192,11 +192,11 @@ public class PlayerBehavior : MonoBehaviour {
 		FadeToClear();
 		
 		// If the texture is almost clear...
-		if(fader.guiTexture.color.a <= 0.05f)
+		if(fader.GetComponent<GUITexture>().color.a <= 0.05f)
 		{
 			// ... set the colour to clear and disable the GUITexture.
-			fader.guiTexture.color = Color.clear;
-			fader.guiTexture.enabled = false;
+			fader.GetComponent<GUITexture>().color = Color.clear;
+			fader.GetComponent<GUITexture>().enabled = false;
 
 			// The scene is no longer starting.
 			sceneStarting = false;
@@ -206,13 +206,13 @@ public class PlayerBehavior : MonoBehaviour {
 	public void EndScene ()
 	{
 		// Make sure the texture is enabled.
-		fader.guiTexture.enabled = true;
+		fader.GetComponent<GUITexture>().enabled = true;
 		
 		// Start fading towards black.
 		FadeToBlack();
 
 		// If the screen is almost black...
-		if(fader.guiTexture.color.a >= 0.49f)
+		if(fader.GetComponent<GUITexture>().color.a >= 0.49f)
 		{
 			if (OutsideScene)
 			{

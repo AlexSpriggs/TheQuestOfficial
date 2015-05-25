@@ -24,7 +24,7 @@ public class PressAnyToStart : MonoBehaviour {
 			UIRoot.alpha -= 0.1f;
 
 			// If the screen is almost black...
-			if(myFader.fader.guiTexture.color.a >= .80f)
+			if(myFader.fader.GetComponent<GUITexture>().color.a >= .80f)
 			{
 				Application.LoadLevel(nextSceneName);
 			}

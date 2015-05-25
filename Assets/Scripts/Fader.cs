@@ -17,18 +17,18 @@ public class Fader : MonoBehaviour {
 	{
 		//fader.guiTexture.color = Color.black;
 		// Set the texture so that it is the the size of the screen and covers it.
-		fader.guiTexture.pixelInset = new Rect(0f, 0f, Screen.width, Screen.height);
+		fader.GetComponent<GUITexture>().pixelInset = new Rect(0f, 0f, Screen.width, Screen.height);
 	}
 
 	void FadeToClear ()
 	{
 		// Lerp the colour of the texture between itself and transparent.
-		fader.guiTexture.color = Color.Lerp(fader.guiTexture.color, Color.clear, fadeSpeed * Time.deltaTime);
+		fader.GetComponent<GUITexture>().color = Color.Lerp(fader.GetComponent<GUITexture>().color, Color.clear, fadeSpeed * Time.deltaTime);
 	}
 	public void FadeToBlack ()
 	{
 		// Lerp the colour of the texture between itself and black.
-		fader.guiTexture.color = Color.Lerp(fader.guiTexture.color, Color.black, fadeSpeed * Time.deltaTime);
+		fader.GetComponent<GUITexture>().color = Color.Lerp(fader.GetComponent<GUITexture>().color, Color.black, fadeSpeed * Time.deltaTime);
 	}
 	
 
