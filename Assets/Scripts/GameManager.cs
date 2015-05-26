@@ -10,6 +10,8 @@ public class GameManager : MonoBehaviour {
     private GameObject room_openwindow;
 	public bool isFirstPlaythrough = true;
 
+	private soundManager SM;
+
 	public enum ComputerStates
 	{
 		Happy,
@@ -27,6 +29,8 @@ public class GameManager : MonoBehaviour {
 
 		StressLevel = 0;
         myState = ComputerStates.Happy;
+
+		SM = GameObject.FindGameObjectWithTag("SoundManager").GetComponent<soundManager>();
 
 	}
 
@@ -52,6 +56,9 @@ public class GameManager : MonoBehaviour {
                 {
                     doorTrigger.SetActive(true);
                     room_openwindow.SetActive(true);
+
+					//audio for window shades opening
+					SM.BedroomSounds(false);
                 }
                 else
                 {

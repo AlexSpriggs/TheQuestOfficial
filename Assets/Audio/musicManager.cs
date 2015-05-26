@@ -45,11 +45,6 @@ public class musicManager : MonoBehaviour {
 		if (Application.loadedLevel == 4) {
 			outsideMusicFunction ();		
 		}
-
-		print("Music Volume: " + musicSource1.volume);
-		print ("Is Music Playing: " + musicSource1.isPlaying);
-		print ("Is Volume Lowering: " + isLowerVolume);
-		print ("Is Music playing on awake: " + musicSource1.playOnAwake);
 	}
 
 	public void insideMusicFunction(){

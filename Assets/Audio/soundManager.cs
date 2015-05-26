@@ -7,7 +7,7 @@ public class soundManager : MonoBehaviour {
 	public bool isComputerOn = false;
 	//public bool isDialog = false;
 
-	public bool doorOpen = false;
+	//public bool doorOpen = false;
 
 	public bool isTextScrolling = false;
 
@@ -18,6 +18,7 @@ public class soundManager : MonoBehaviour {
 	public AudioClip computerOn;
 	//public AudioClip dialogSound;
 	public AudioClip doorSound;
+	public AudioClip openShades;
 	public AudioClip textScrollingSound;
 
 	void Awake(){
@@ -45,20 +46,17 @@ public class soundManager : MonoBehaviour {
 			print("balls");
 		}
 
-		/*if (isDialog == true) {
-			soundSource.clip = dialogSound;
-			soundSource.PlayOneShot(dialogSound);
-			isDialog = false;
-			print("balls");
-		}*/
 	}
 
-	public void BedroomSounds(){
+	public void BedroomSounds(bool doorOpen = false){
 		if (doorOpen == true) {
 			soundSource3.clip = doorSound;
 			soundSource3.PlayOneShot(doorSound);
 			isClickSound = false;
-			print("balls");
+		}
+		else{
+			soundSource3.clip = openShades;
+			soundSource3.PlayOneShot(openShades);
 		}
 	}
 
@@ -67,7 +65,6 @@ public class soundManager : MonoBehaviour {
 			soundSource1.clip = textScrollingSound;
 			soundSource1.PlayOneShot(textScrollingSound);
 			isTextScrolling = false;
-			print ("doing the thing");
 		}
 	}
 }

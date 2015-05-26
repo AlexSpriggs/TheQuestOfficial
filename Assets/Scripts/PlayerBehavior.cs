@@ -166,9 +166,9 @@ public class PlayerBehavior : MonoBehaviour {
 	void DoorTriggered() 
 	{
 		//Audio for Door
-		SM.doorOpen = true;
-		SM.BedroomSounds();
-		SM.doorOpen = false;
+		//SM.doorOpen = true;
+		SM.BedroomSounds(true);
+		//SM.doorOpen = false;
 
 		OutsideScene = true;
 		sceneEnding = true;
