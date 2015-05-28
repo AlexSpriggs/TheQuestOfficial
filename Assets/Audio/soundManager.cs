@@ -36,14 +36,12 @@ public class soundManager : MonoBehaviour {
 			soundSource1.clip = clickSound;
 			soundSource1.PlayOneShot(clickSound);
 			isClickSound = false;
-			print("balls");
 		}
 
 		if (isComputerOn == true) {
 			soundSource2.clip = computerOn;
 			soundSource2.PlayOneShot(computerOn);
 			isComputerOn = false;
-			print("balls");
 		}
 
 	}
@@ -63,7 +61,7 @@ public class soundManager : MonoBehaviour {
 	public void NPCSounds(){
 		if(isTextScrolling == true){
 			soundSource1.clip = textScrollingSound;
-			soundSource1.PlayOneShot(textScrollingSound);
+			soundSource1.PlayOneShot(textScrollingSound, 0.25f);
 			isTextScrolling = false;
 		}
 	}
