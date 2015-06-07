@@ -12,25 +12,36 @@ public class Movement : MonoBehaviour
     // 1) Make sure the Ray Origin objects are aligned with the player sprite
     // 2) Make sure the objects have been dragged into the script's inspector (there should be at least 10)
     // 3) The player sprite must also have a trigger collider that is slightly bigger than itself
+    // 4) Include the place into this script's inspector the MoveIndicator prefab, to enable the move indication feature
 
     // These are empty game objects aligned with the top left / right / mid, btm left / right / mid, and mid left x2 / right x2 of the player sprite
     // We will use the locations of these objects to fire rays from to check for obstacle collision
     public List<GameObject> rayOrigins;
+    public MoveIndicator _MoveIndicator;
+    public bool useOffset = true;
 
 	private Vector3 direction;
 	private Vector3 clickPosition;
 	private bool isMoving = false;
 	private float minDistanceToClick = 0.01f;
-	private string targetColliderTag = "";
+    private string targetColliderTag = "";
+    [SerializeField] private float offsetValue = 0.3f;
+    private Vector3 moveoffset; // offsets clickPosition, so that the sprite's feet is aligned with clickPosition (instead of the sprite's origin)
 
 	private PlayerBehavior _PlayerBehavior;
 	private Animator animator;
 
-	void Start() 
-	{
-		_PlayerBehavior = gameObject.GetComponent<PlayerBehavior> ();
-		animator = gameObject.GetComponent<Animator>();
-	}
+    void Start()
+    {
+        _PlayerBehavior = gameObject.GetComponent<PlayerBehavior>();
+        animator = gameObject.GetComponent<Animator>();
+
+        moveoffset = Vector3.zero;
+        if (useOffset)
+        {
+            moveoffset.y = offsetValue;
+        }
+    }
 
 	void FixedUpdate()
 	{	
@@ -68,14 +79,22 @@ public class Movement : MonoBehaviour
             if (IsReachedTarget()) 
 				stopMoving();
 		}
-		if (Input.GetMouseButton(0))
-		{
-			clickPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        if (Input.GetMouseButton(0))
+        {
+            clickPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+
+            if (_MoveIndicator)
+            {
+                _MoveIndicator.EnableIndicator(clickPosition);
+            }
+
+            clickPosition += moveoffset;
             direction = GetDirection();
-			isMoving = true;
-			UpdateAnimatorMovementVars();
-			UpdateAnimatorIsMoving();
-		}
+            isMoving = true;
+            UpdateAnimatorMovementVars();
+            UpdateAnimatorIsMoving();
+
+        }
 	}
 
     Vector3 GetDirection()
@@ -131,7 +150,10 @@ public class Movement : MonoBehaviour
     }
 
     // Called by the interactable object that the player clicked on
-	public void setTargetColliderTag(string tag) { targetColliderTag = tag; }
+	public void setTargetColliderTag(string tag) 
+    {
+        targetColliderTag = tag;
+    }
 
     // There are 2 situations where stopMoving() will be called:
     // 1) Player has reached the location that was clicked on
@@ -139,6 +161,11 @@ public class Movement : MonoBehaviour
 	public void stopMoving() { 
 		isMoving = false;
 		UpdateAnimatorIsMoving();
+
+        if (_MoveIndicator)
+        {
+            _MoveIndicator.DisableIndicator();
+        }
 	}
 
     public void UpdateAnimatorIsMoving()

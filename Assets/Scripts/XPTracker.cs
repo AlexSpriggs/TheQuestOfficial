@@ -9,19 +9,25 @@ public class XPTracker : MonoBehaviour {
 	private float maxXP = 1000.0f;
 	private float lerpSpeed = 2.5f;
 
-	void Start() 
-	{
-		xpBar.value = 0.0f;
-	}
+    void Start()
+    {
+        if (xpBar)
+        {
+            xpBar.value = 0.0f;
+        }
+    }
 
-	void Update () 
-	{
-		if (Input.GetMouseButtonDown(0)) addXP(50);		// LMB - adds 5%
-		if (Input.GetMouseButtonDown(1)) addXP(100);	// RMB - adds 10%
-		float currPercentage = currXP / maxXP;
+    void Update()
+    {
+        if (xpBar)
+        {
+            if (Input.GetMouseButtonDown(0)) addXP(50);		// LMB - adds 5%
+            if (Input.GetMouseButtonDown(1)) addXP(100);	// RMB - adds 10%
+            float currPercentage = currXP / maxXP;
 
-		xpBar.value = Mathf.Lerp(xpBar.value, currPercentage, Time.deltaTime * lerpSpeed);
-	}
+            xpBar.value = Mathf.Lerp(xpBar.value, currPercentage, Time.deltaTime * lerpSpeed);
+        }
+    }
 
 	public void addXP (float amt) {currXP += amt;}
 }
