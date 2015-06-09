@@ -23,6 +23,7 @@ public class Movement : MonoBehaviour
 	private Vector3 direction;
 	private Vector3 clickPosition;
 	private bool isMoving = false;
+    private bool isMouseOnInteractable = false;
 	private float minDistanceToClick = 0.01f;
     private string targetColliderTag = "";
     [SerializeField] private float offsetValue = 0.3f;
@@ -83,9 +84,14 @@ public class Movement : MonoBehaviour
         {
             clickPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
-            if (_MoveIndicator)
+            if (!isMouseOnInteractable && _MoveIndicator)
             {
                 _MoveIndicator.EnableIndicator(clickPosition);
+                targetColliderTag = "";
+            }
+            else // if mouse is on interactable when clicking, then the move indicator is already active, so use its position
+            {
+                clickPosition = _MoveIndicator.transform.position;
             }
 
             clickPosition += moveoffset;
@@ -180,5 +186,15 @@ public class Movement : MonoBehaviour
         animator.SetFloat("dir_y", direction.y);
         if (Mathf.Abs(direction.y) > Mathf.Abs(direction.x)) animator.SetBool("is_y_greaterthan_x", true);
         else animator.SetBool("is_y_greaterthan_x", false);
+    }
+
+    public void SetIsMouseOnInteractable(bool isMouse)
+    {
+        isMouseOnInteractable = isMouse;
+    }
+
+    public void SetMoveIndicator(Vector2 targetPosition)
+    {
+        _MoveIndicator.EnableIndicator(targetPosition);
     }
 }

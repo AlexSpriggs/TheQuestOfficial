@@ -5,6 +5,7 @@ public class ClickInteract : MonoBehaviour {
 	
 	public GameObject player;
 
+    [SerializeField] private Vector3 indicatorOffset; // set in inspector to finetune where the indicator appears, relative to the interactable object
     private bool hasBeenSpokenTo = false;
 	private Movement _Movement;
 	private PlayerBehavior _PlayerBehavior;
@@ -34,26 +35,43 @@ public class ClickInteract : MonoBehaviour {
 			resetSpriteColor();
 	}
 	
-	void OnMouseDown() {
-		_Movement.setTargetColliderTag (transform.tag);
-		if (isTouchingPlayer)
-		{
-			// _Movement.stopMoving();
+	void OnMouseDown() 
+    {
+        LMBDownOnItem();
+	}
+	
+	void OnMouseOver() 
+    {
+		flashSprite();
+        _Movement.SetIsMouseOnInteractable(true);
+
+        if (Input.GetMouseButton(0))
+        {
+            LMBDownOnItem();
+        }
+	}
+
+    void LMBDownOnItem()
+    {
+        _Movement.setTargetColliderTag(transform.tag);
+        _Movement.SetMoveIndicator(transform.position + indicatorOffset);
+
+        if (isTouchingPlayer)
+        {
+            // _Movement.stopMoving();
 
             if (!hasBeenSpokenTo)
             {
                 // hasBeenSpokenTo = true;
                 _PlayerBehavior.Trigger(transform.tag, GetComponent<Collider2D>());
             }
-		}
-	}
-	
-	void OnMouseOver() {
-		flashSprite();
-	}
-	
-	void OnMouseExit() {
-		resetSpriteColor();
+        }
+    }
+
+    void OnMouseExit()
+    {
+        resetSpriteColor();
+        _Movement.SetIsMouseOnInteractable(false);
 	}
 	
 	void flashSprite() {
