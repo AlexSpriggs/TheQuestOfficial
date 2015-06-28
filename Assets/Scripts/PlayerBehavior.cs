@@ -10,7 +10,7 @@ using System.Collections.Generic;
 
 public class PlayerBehavior : MonoBehaviour {
 
-	private soundManager SM;
+	private soundManager SoundManager;
 
 #region IndoorVariables
 	[Header("Indoor Variables")]
@@ -28,12 +28,15 @@ public class PlayerBehavior : MonoBehaviour {
 	private int nextSceneNumber;
 	private const int outsideSceneNumber = 4;
 	private GameManager _GameManager;
+    private bool doorOpenSoundPlayed = false;
 #endregion
 
 #region OutsideVariables
 	[Header("Outside Variables")]
 	public bool isOutside = false;
     public GameObject dialogBox;
+    public GameObject computerUIRoot;
+    public GameObject inputField;
     private Collider2D npcColl;
 
     // Script Objects
@@ -57,8 +60,6 @@ public class PlayerBehavior : MonoBehaviour {
 		{
 			fader=GameObject.FindGameObjectWithTag("Fader");
 			_GameManager=GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
-
-	        SM = GameObject.FindGameObjectWithTag("SoundManager").GetComponent<soundManager>();
 		}
 		else
 		{
@@ -67,7 +68,9 @@ public class PlayerBehavior : MonoBehaviour {
 	        dialogUILabel = dialogBox.GetComponent<UILabel>();
             animator = gameObject.GetComponent<Animator>();
             animator.runtimeAnimatorController = anim_controllers[colorLevel];
-		}
+        }
+
+        SoundManager = GameObject.FindGameObjectWithTag("SoundManager").GetComponent<soundManager>();
 	}
 
 	void Awake ()
@@ -87,13 +90,14 @@ public class PlayerBehavior : MonoBehaviour {
 			if(sceneStarting)
 				StartScene();
 			// ... call the StartScene function.
-			if(sceneEnding)
-				EndScene();
 		}
 		else if (isTalking && Input.GetMouseButtonDown(0))
         {
 			DialogTriggered();
         }
+
+        if (sceneEnding)
+            EndScene();
 
         // Debug only
         if (isDebug && Input.GetMouseButtonDown(1) && animator != null)
@@ -148,13 +152,37 @@ public class PlayerBehavior : MonoBehaviour {
 #region IndoorFunctions
 	void ComputerTriggered() 
 	{
-		SM.isComputerOn = true;
-		SM.GUISounds();
-		SM.isComputerOn = false;
+        if (SoundManager != null)
+        {
+            SoundManager.isComputerOn = true;
+            SoundManager.GUISounds();
+            SoundManager.isComputerOn = false;
+        }
+        else
+        {
+            Debug.LogWarning("SoundManager is null");
+        }
+
 		this.GetComponent<Movement>().speed = 0;	
 		onComp = true;
-		questUIFirstHalf.SetActive(false);
-		uiRoot.SetActive(true);
+
+        if (questUIFirstHalf != null)
+        { 
+		    questUIFirstHalf.SetActive(false);
+        } 
+
+        if (computerUIRoot != null)
+        {
+            computerUIRoot.SetActive(true);
+        }
+        else if (uiRoot != null)
+        {
+            uiRoot.SetActive(true);
+        }
+        else
+        {
+            Debug.LogWarning("Both uiRoot and computerUIRoot are null. Unable to activate computer interface");
+        }
 	}
 	
 	void BedTriggered() 
@@ -166,9 +194,13 @@ public class PlayerBehavior : MonoBehaviour {
 	void DoorTriggered() 
 	{
 		//Audio for Door
-		//SM.doorOpen = true;
-		SM.BedroomSounds(true);
-		//SM.doorOpen = false;
+        if (!doorOpenSoundPlayed)
+        { 
+		    //SoundManager.doorOpen = true;
+		    SoundManager.BedroomSounds(true);
+		    //SoundManager.doorOpen = false;
+            doorOpenSoundPlayed = true;
+        }
 
 		OutsideScene = true;
 		sceneEnding = true;
@@ -242,6 +274,7 @@ public class PlayerBehavior : MonoBehaviour {
 				_Movement.enabled = true;
 				isDialogTyping = false;
 				isTalking = false;
+                _Movement.SetIsMouseOnInteractable(false);
 			}
 			// _TypewriterEffect.ResetToBeginning();
 		}
@@ -269,6 +302,14 @@ public class PlayerBehavior : MonoBehaviour {
             // _Movement.UpdateAnimatorMovementVars();
             // _Movement.UpdateAnimatorIsMoving();
         }
+    }
+
+    public void triggerEnding()
+    {
+        sceneEnding = true;
+        nextSceneNumber = Application.loadedLevel + 1;
+        gameObject.GetComponent<PolygonCollider2D>().enabled = false;
+        gameObject.GetComponent<BoxCollider2D>().enabled = false;
     }
 #endregion
 }

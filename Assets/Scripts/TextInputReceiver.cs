@@ -3,21 +3,69 @@ using System.Collections;
 
 public class TextInputReceiver : MonoBehaviour {
 
+    public GameObject computerUIRoot;
+    public GameObject questUI;
     public GameObject inputField;
+    public GameObject outputField;
+    public GameObject player;
     UIInput inputField_UIInput;
     UILabel outputField_UILabel;
 
     void Start()
     {
-        inputField_UIInput = inputField.GetComponent<UIInput>();
-        outputField_UILabel = gameObject.GetComponent<UILabel>();
+        if (inputField != null)
+        {
+            inputField_UIInput = inputField.GetComponent<UIInput>();
+        }
+        else
+        {
+            Debug.LogWarning("Input Field is null in TextInputReceiver script");
+        }
+
+        if (outputField != null)
+        {
+            outputField_UILabel = outputField.GetComponent<UILabel>();
+        }
+        else
+        {
+            Debug.LogWarning("Output Field is null in TextInputReceiver script");
+        }
     }
 
     // Update the output field with the input field's value
     // Called when the input field's value is submitted
     public void ReceiveTextInput()
     {
-        outputField_UILabel.text = inputField_UIInput.value;
+        if (questUI != null)
+        {
+            questUI.SetActive(true);
+        }
+        else
+        {
+            Debug.LogWarning("Quest UI is null in TextInputReceiver script");
+        }
+
+        if (outputField_UILabel != null)
+        {
+            outputField_UILabel.text = "- " + inputField_UIInput.value;
+            inputField_UIInput.value = "Type here";
+        }
+        else
+        {
+            Debug.LogWarning("Output Field is null in TextInputReceiver script");
+        }
+
+        if (computerUIRoot != null)
+        {
+            computerUIRoot.SetActive(false);
+        }
+        else
+        {
+            Debug.LogWarning("Computer UI Root is null in TextInputReceiver script");
+        }
+
+        player.GetComponent<PlayerBehavior>().triggerEnding();
+        player.GetComponent<Movement>().triggerEnding();
     }
 }
 

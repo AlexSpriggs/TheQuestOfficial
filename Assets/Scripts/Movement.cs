@@ -32,6 +32,8 @@ public class Movement : MonoBehaviour
 	private PlayerBehavior _PlayerBehavior;
 	private Animator animator;
 
+    private bool isGameEnding = false;
+
     void Start()
     {
         _PlayerBehavior = gameObject.GetComponent<PlayerBehavior>();
@@ -80,7 +82,7 @@ public class Movement : MonoBehaviour
             if (IsReachedTarget()) 
 				stopMoving();
 		}
-        if (Input.GetMouseButton(0))
+        if (!isGameEnding && Input.GetMouseButton(0))
         {
             clickPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
@@ -196,5 +198,16 @@ public class Movement : MonoBehaviour
     public void SetMoveIndicator(Vector2 targetPosition)
     {
         _MoveIndicator.EnableIndicator(targetPosition);
+    }
+
+    public void triggerEnding()
+    {
+        speed = 0.7f;
+        isGameEnding = true;
+        clickPosition = transform.position + new Vector3(0, 500, 0);
+        direction = GetDirection();
+        isMoving = true;
+        UpdateAnimatorMovementVars();
+        UpdateAnimatorIsMoving();
     }
 }
